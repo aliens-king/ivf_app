@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="etScreenAnchorPane" stylesheets="@../CSS/ETTable.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.EtScreenController">
+   <children>
+      <TableView fx:id="etTableView" layoutX="58.0" layoutY="54.0" prefHeight="748.0" prefWidth="346.0">
+        <columns>
+          <TableColumn fx:id="timeColumn" prefWidth="162.0" text="TIME" />
+        </columns>
+      </TableView>
+      <VBox layoutX="510.0" layoutY="48.0" prefHeight="710.0" prefWidth="850.0" spacing="30.0">
+         <children>
+            <HBox maxWidth="860.0" prefHeight="43.0" prefWidth="843.0" spacing="230.0">
+               <children>
+                  <Label fx:id="timeLabel" alignment="TOP_LEFT" prefHeight="50.0" prefWidth="120.0" text="%tv.time" />
+                  <Label fx:id="dateLabel" alignment="TOP_CENTER" prefHeight="50.0" prefWidth="120.0" text="%tv.date" />
+                  <Button fx:id="nextAppointmentButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#nextETAction" prefHeight="50.0" prefWidth="200.0" text="%tv.button" />
+               </children>
+            </HBox>
+            <ImageView fx:id="etImageView" fitHeight="650.0" fitWidth="865.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </VBox>
+      <fx:include source="CommonFooter.fxml" />
+   </children>
+   <styleClass>
+      <String fx:value="root" />
+      <String fx:value="layout-resolution-includes" />
+   </styleClass>
+</AnchorPane>

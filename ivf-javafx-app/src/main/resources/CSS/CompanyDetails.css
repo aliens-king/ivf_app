@@ -1,0 +1,9 @@
+.companyLabel .label{
+	-fx-font-size: 24px;
+	-fx-text-fill: #FFFFFF;
+	-fx-font-family: "Open Sans";
+}
+.headerLebel {
+	-fx-font-size: 24px;
+}
+

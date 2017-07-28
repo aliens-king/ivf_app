@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="2000.0" maxWidth="2000.0" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.CryopreservationSemenController">
+ <children>
+     <GridPane layoutX="53.0" layoutY="456.0" prefHeight="338.0" prefWidth="1130.0" style="-fx-background-color: white;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="0.0" prefWidth="0.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="640.0" minWidth="10.0" prefWidth="575.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="555.0" minWidth="10.0" prefWidth="565.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="84.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="201.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="201.0" minHeight="0.0" prefHeight="11.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="216.0" minHeight="10.0" prefHeight="216.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="597.0" text="%cryopreservation.multiline.text" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <styleClass>
+                  <String fx:value="label-text" />
+                  <String fx:value="grid" />
+               </styleClass></Label>
+            <TableView fx:id="semenTable" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="78.0" prefWidth="575.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="2">
+              <columns>
+                  <TableColumn fx:id="total" prefWidth="190.0" text="%cryopreservationsemen.tablecolumn.total" />
+                <TableColumn fx:id="available" minWidth="0.0" prefWidth="190.0" text="%cryopreservation.tablecolumn.available" />
+                <TableColumn fx:id="used" prefWidth="190.0" text="%cryopreservation.tablecolumn.used" />
+              </columns>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TableView>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="600.0" text="%cryopreservation.tablecolumn.quality" textFill="WHITE" GridPane.columnIndex="2">
+               <styleClass>
+                  <String fx:value="label-text" />
+                  <String fx:value="grid" />
+               </styleClass></Label>
+            <TableView fx:id="andrologyTableView" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.rowSpan="2">
+               <columns>
+                  <TableColumn fx:id="density" prefWidth="185.0" text="%cryopreservationsemen.tablecolumn.total" />
+                  <TableColumn fx:id="motility" prefWidth="185.0" text="%cryopreservation.tablecolumn.available" />
+                  <TableColumn fx:id="morphology" prefWidth="183.0" text="%cryopreservation.tablecolumn.used" />
+               </columns>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TableView>
+            <TableView fx:id="semenCryoOldTableView" editable="true" prefHeight="179.0" prefWidth="1028.0" GridPane.columnSpan="3" GridPane.rowIndex="3">
+              <columns>
+                  <TableColumn fx:id="date" prefWidth="130.0" text="%common.cryopreservation.label.date" />
+                <TableColumn fx:id="codeCycle" prefWidth="120.0" text="%common.cryopreservation.label.cycle" />
+                <TableColumn fx:id="codeSrNo" prefWidth="120.0" text="%cryopreservation.tablecolumn.srno" />
+                  <TableColumn fx:id="codeDateOfCryo" prefWidth="160.0" text="%cryopreservation.tablecolumn.dateofcryo" />
+                  <TableColumn fx:id="codeDateOfUse" prefWidth="160.0" text="%cryopreservation.tablecolumn.dateofuse" />
+                  <TableColumn fx:id="cryoDmm" prefWidth="150.0" text="%common.cryopreservation.label.dmm" />
+                  <TableColumn fx:id="remarks" prefWidth="280.0" text="%common.cryopreservation.label.remarks" />
+              </columns>
+               <GridPane.margin>
+                  <Insets bottom="1.0" />
+               </GridPane.margin>
+            </TableView>
+         </children>
+      </GridPane>
+      <fx:include fx:id="commonDetail" source="CommonDetail.fxml" />
+      <fx:include fx:id="investigationCommon" source="Investigation.fxml" />
+      <fx:include source="CommonFooter.fxml" />
+      <VBox layoutX="1200.0" layoutY="456.0" prefHeight="200.0" prefWidth="150.0" spacing="6.0">
+         <children>
+            <Button layoutX="1328.0" layoutY="484.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="30.0" prefWidth="140.0" text="%common.button.save" GridPane.columnIndex="1" />
+            <Button layoutX="1328.0" layoutY="524.0" mnemonicParsing="false" onAction="#printAction" prefHeight="30.0" prefWidth="140.0" text="%common.button.print.form" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </VBox>
+      <GridPane layoutX="1200.0" layoutY="540.0" maxHeight="110.0" maxWidth="250.0" prefHeight="120.0" prefWidth="275.0" styleClass="registrant-gridpane">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="30.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="70.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label style="-fx-text-fill: white;" text="%common.emb.registrant" />
+            <Label style="-fx-text-fill: white;" text="%common.emb.wit.registrant" GridPane.rowIndex="1" />
+            <TextField fx:id="embRegistrant" prefHeight="30.0" GridPane.columnIndex="1" />
+            <TextField fx:id="witEmbRegistrant" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#saveRegistrant" prefHeight="30.0" prefWidth="250.0" text="%common.registrants.save" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+   <stylesheets>
+      <URL value="@../CSS/mvid.css" />
+      <URL value="@../CSS/cryopreservationSemen.css" />
+   </stylesheets>
+   <styleClass>
+      <String fx:value="layout-resolution-includes" />
+      <String fx:value="body" />
+   </styleClass>
+</AnchorPane>

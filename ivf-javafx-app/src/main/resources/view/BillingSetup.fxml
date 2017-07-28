@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane stylesheets="@../CSS/mvid.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.BillingSetupController">
+   <styleClass>
+      <String fx:value="root" />
+      <String fx:value="layout-resolution-includes" />
+   </styleClass>
+   <children>
+      <GridPane layoutX="60.0" layoutY="76.0" prefHeight="190.0" prefWidth="518.0" vgap="1.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="284.0" minWidth="10.0" percentWidth="30.0" prefWidth="142.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="441.0" minWidth="10.0" percentWidth="70.0" prefWidth="441.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" percentHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" percentHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" percentHeight="40.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label styleClass="custom-common-text-size" text="%billing.setup.procedure.name" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin></Label>
+            <Label styleClass="custom-common-text-size" text="%billing.setup.procedure.price" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin></Label>
+            <VBox GridPane.columnIndex="1">
+               <children>
+                  <TextField fx:id="procedureNameTextField" styleClass="custom-common-text-field" />
+                  <Text fx:id="procedureNameErrorText" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="228.0" />
+               </children>
+            </VBox>
+            <HBox GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <VBox prefHeight="57.0" prefWidth="371.0">
+                     <children>
+                        <TextField fx:id="procedurePriceTextField" prefWidth="333.0" styleClass="custom-common-text-field" />
+                        <Text fx:id="procedurePriceErrorText" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="276.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Button id="custom-common-button" mnemonicParsing="false" onAction="#saveAction" styleClass="custom-common-button" text="%common.button.save" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin></Button>
+         </children>
+      </GridPane>
+      <TableView fx:id="procedureTable" layoutX="60.0" layoutY="265.0" prefHeight="450.0" prefWidth="1315.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="150.0" text="Sr. No." />
+          <TableColumn fx:id="procedureName" prefWidth="400.0" text="Procedure name" />
+            <TableColumn fx:id="procedurePrice" prefWidth="150.0" text="Procedure price" />
+            <TableColumn fx:id="procedureCreateDate" prefWidth="300.0" text="Created date" />
+            <TableColumn fx:id="createdBy" prefWidth="312.0" text="Created By" />
+        </columns>
+      </TableView>
+      <fx:include source="CommonFooter.fxml" />
+      <Label layoutX="38.0" layoutY="25.0" prefHeight="35.0" prefWidth="258.0" styleClass="page-header-label" text="%billing.setup.page.header" />
+      <Button layoutX="1225.0" layoutY="730.0" mnemonicParsing="false" onAction="#printAction" styleClass="custom-common-button" text="%common.button.print" />
+      <Label layoutX="588.0" layoutY="139.0" text="(Note: Only numeric value allow in price.)" />
+   </children>
+</AnchorPane>

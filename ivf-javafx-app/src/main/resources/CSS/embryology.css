@@ -1,0 +1,58 @@
+.body{
+	-fx-background-color: #2980B9;
+	/*-fx-font-size: 12px;*/
+	-fx-text-fill: #ffffff;
+}
+
+
+.grid .text{
+
+	-fx-background-color:#929292;
+	-fx-font-size: 18px;
+
+}
+.embryo-label{
+
+   -fx-background-color: #06AAD9;
+   -fx-text-fill: #ffffff;
+   -fx-font-size: 12px;
+   -fx-font-weight: normal;
+}
+.text {
+	-fx-text-fill: #ffffff;
+}
+
+.error{
+	-fx-text-fill: #B73630;
+}
+
+.headerLebel {
+	-fx-text-fill: #ffffff;
+}
+
+.headcolor .label{
+
+   -fx-background-color: #3CBAFF;
+   -fx-text-fill: #ffffff;
+   -fx-font-size: 12px;
+   -fx-font-weight: normal;
+}
+
+#vboxButtons {
+	-fx-background-color: #B73630;
+	-fx-text-fill: #ffffff;
+	-fx-font-size: 16px;
+
+}
+
+#vboxButtons{
+    -fx-background-color: #B73630;
+}
+#vboxButtons:hover{
+    -fx-background-color: linear-gradient(#B73630, #CE4D46);
+}
+
+#remarks {
+	-fx-font-size: 18px;
+	
+}

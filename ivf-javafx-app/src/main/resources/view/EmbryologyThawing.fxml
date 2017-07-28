@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="2000.0" maxWidth="2000.0" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.EmbryologyThawingController">
+   <children>
+      <TableView fx:id="embryoThawTableView" layoutX="58.0" layoutY="473.0" prefHeight="290.0" prefWidth="1065.0">
+         <columns>
+            <TableColumn fx:id="srNo" prefWidth="260.0" text="%embryothawing.tablecolumn.serialnumber" />
+            <TableColumn prefWidth="459.0" text="%embryothawing.tablecolumn.grade">
+               <columns>
+                  <TableColumn fx:id="day1" prefWidth="270.0" text="%embryothawing.tablecolumn.day1" />
+                  <TableColumn fx:id="day2" prefWidth="270.0" text="%embryothawing.tablecolumn.day2" />
+               </columns>
+            </TableColumn>
+            <TableColumn prefWidth="260.0" text="%embryothawing.tablecolumn.embryologist" />
+         </columns></TableView>
+      <VBox layoutX="1129.0" layoutY="474.0" prefHeight="290.0" prefWidth="130.0">
+         <children>
+            <Label alignment="CENTER" layoutX="1061.0" layoutY="486.0" prefHeight="40.0" prefWidth="130.0" text="%common.label.remarks">
+               <styleClass>
+                  <String fx:value="headercolor" />
+                  <String fx:value="tableheadtextcolor" />
+                  <String fx:value="grid" />
+               </styleClass></Label>
+            <TextArea id="remarks" fx:id="remarksTextArea" prefHeight="251.0" prefWidth="130.0" wrapText="true" />
+         </children>
+      </VBox>
+      <fx:include fx:id="commonDetail" source="CommonDetail.fxml" />
+      <fx:include fx:id="investigationCommon" source="Investigation.fxml" />
+      <VBox layoutX="1273.0" layoutY="476.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#editAction" prefHeight="30.0" prefWidth="140.0" styleClass="headercolor" text="%common.button.edit" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#saveAction" prefHeight="30.0" prefWidth="140.0" styleClass="headercolor" text="%common.button.save" textFill="WHITE" />
+            <Button fx:id="embryoTransferButton" mnemonicParsing="false" onAction="#embryoTransferAction" prefHeight="30.0" prefWidth="140.0" styleClass="headercolor" text="%embryology.button.embryotransfer" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#printAction" prefHeight="32.0" prefWidth="140.0" styleClass="headercolor" text="%common.button.print.form" textFill="WHITE" />
+         </children>
+      </VBox>
+       <fx:include source="CommonFooter.fxml" />
+   </children>
+   <styleClass>
+      <String fx:value="layout-resolution-includes" />
+      <String fx:value="body" />
+   </styleClass>
+   <stylesheets>
+      <URL value="@../CSS/mvid.css" />
+      <URL value="@../CSS/EmbryologyThawing.css" />
+   </stylesheets>
+</AnchorPane>

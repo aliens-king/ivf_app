@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="2000.0" maxWidth="2000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.CyclesController">
+   <children>
+      <fx:include fx:id="commonDetail" source="CommonDetail.fxml" />
+      <fx:include fx:id="investigationCommon" source="Investigation.fxml" />
+      <fx:include source="CommonFooter.fxml" />
+      <TableView id="appointmentTable" fx:id="cyclesTableView" editable="true" layoutX="53.0" layoutY="470.0" prefHeight="300.0" prefWidth="1400.0">
+        <columns>
+          <TableColumn fx:id="srNo" prefWidth="60.0" text="%cycles.tablecolumn.sno" />
+          <TableColumn fx:id="womanCodeCol" prefWidth="130.0" text="%cycles.tablecolumn.womanCode" />
+          <TableColumn fx:id="partnerCodeCol" prefWidth="130.0" text="%cycles.tablecolumn.partnerCode" />
+          <TableColumn fx:id="date" text="%cycles.tablecolumn.date" />
+          <TableColumn fx:id="eggs" prefWidth="65.0" text="%cycles.tablecolumn.eggcollection" />
+          <TableColumn fx:id="semenQuality" prefWidth="130.0" text="%cycles.tablecolumn.quality" /> 
+          <TableColumn fx:id="pOutcome" prefWidth="280.0" text="%cycles.tablecolum.pregnencyoutcome" />
+          <TableColumn fx:id="evaluation" prefWidth="100.0" text="%cycles.tablecolumn.evalution" />
+          <TableColumn fx:id="remarks" prefWidth="280.0" text="%cycles.tablecolumn.remarks" />
+          <TableColumn fx:id="cyclesButtonColumn" prefWidth="140.0" text="%cycles.tablecolumn.cyclesButton" />
+        </columns>
+      </TableView>
+      <VBox layoutX="1236.0" layoutY="389.0" prefHeight="36.0" prefWidth="133.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#printAction" prefHeight="34.0" prefWidth="132.0" text="%common.button.print.form" />
+         </children>
+      </VBox>
+   </children>
+   <styleClass>
+      <String fx:value="layout-resolution-includes" />
+      <String fx:value="root" />
+   </styleClass>
+   <stylesheets>
+      <URL value="@../CSS/mvid.css" />
+      <URL value="@../CSS/appointmentOverview.css" />
+   </stylesheets>
+</AnchorPane>

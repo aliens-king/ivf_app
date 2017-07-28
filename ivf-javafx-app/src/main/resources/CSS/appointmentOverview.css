@@ -1,0 +1,78 @@
+.root{
+	-fx-background: #2980b9;
+	-fx-font-family: "Open Sans";
+
+}
+
+
+#print-button {
+	-fx-background-color: #3CBAFF;
+	-fx-pref-height: 30px;
+    -fx-pref-width: 150px;
+    -fx-font-size: 11pt;
+}
+
+.layout-resolution-includes{
+	-fx-pref-width : 1435;
+	-fx-pref-height : 687;
+
+}
+
+#appointmentTable{
+	-fx-padding: 1px;
+/* 	-fx-table-cell-border-color: transparent;*/
+    -fx-table-header-border-color: transparent;
+    -fx-font-family: "Open Sans";
+    -fx-font-weight: bold;
+   /*  -fx-control-inner-background: yellow;
+    -fx-background-color: white; */
+}
+
+#appointmentTable .table-row-cell,#appointmentTable .table-column{
+	-fx-cell-size: 25;
+	-fx-alignment: center;
+	-fx-font-size: 15pt;
+	-fx-font-weight: bold;
+    -fx-font-family: "Open Sans";
+}
+#appointmentTable .table-view .column-header, #appointmentTable .table-view .filler {
+	-fx-background-color: #06aad9;
+	-fx-size: 25;
+	-fx-alignment: center;
+    -fx-border-width: 0 0 0 0;
+    -fx-background-color: transparent;
+    -fx-border-color:
+        transparent
+        transparent
+        derive(-fx-base, 80%)
+        transparent;
+    -fx-border-insets: 0 0 0 0;
+}
+
+#appointmentTable .table-view .column-header .label {
+    -fx-font-size: 20pt;
+    -fx-font-family: "Open Sans";
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-opacity: 1;
+}
+
+.table-view .column-header .label{
+	-fx-alignment: center;
+}
+
+.button {
+	-fx-font-size: 15pt;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Open Sans";
+    -fx-background-color: #1BBC9B;
+}
+
+.button:hover:pressed{
+    -fx-background-color: #169C82;
+}
+
+.button:hover{
+    -fx-background-color: linear-gradient(#1BBC9B, #1DCBA8);
+}

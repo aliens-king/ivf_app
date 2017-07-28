@@ -1,0 +1,33 @@
+.body{
+	-fx-background-color: #2980B9;
+}
+ 
+.text {
+	-fx-font-size: 14px;
+	-fx-text-fill: #FFFFFF;
+}
+
+.typetextcolor{
+	-fx-text-fill: #FFFFFF;
+}
+
+.headercolor {
+	
+	-fx-background-color:#06aad9;
+	-fx-text-fill: #FFFFFF;
+}
+.buttonLabel
+{
+   -fx-background-color:#06aad9;
+   
+}
+.grid .text{
+	
+	-fx-background-color:#929292;
+	-fx-font-size: 18px;
+	
+}
+.remarkshead {
+	-fx-background-color:#06aad9;
+	-fx-text-fill: #FFFFFF;
+}

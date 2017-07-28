@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="accountDetailsPane" maxHeight="2000.0" maxWidth="2000.0" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../CSS/mvid.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.AccountDetailsController">
+    <children>
+        <Text fill="WHITE" layoutX="30.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="headerLebel" text="%account.text.title" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="18.0">
+            <font>
+                <Font name="Open Sans" size="24.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="64.0" layoutY="85.43505859375" strokeType="OUTSIDE" strokeWidth="0.0" text="%account.text.surname" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="69.6552734375">
+         <font>
+            <Font size="17.0" />
+         </font>
+        </Text>
+        <TextField fx:id="surname" layoutX="190.0" layoutY="70.0" prefHeight="25.0" prefWidth="300.0" AnchorPane.leftAnchor="189.0" AnchorPane.topAnchor="70.0">
+            <font>
+                <Font name="Open Sans" size="15.0" />
+            </font>
+        </TextField>
+        <Text fill="WHITE" layoutX="64.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%account.text.othernames" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="124.6552734375">
+            <font>
+                <Font name="Open Sans" size="17.0" />
+            </font>
+        </Text>
+        <TextField fx:id="firstName" layoutX="190.0" layoutY="120.0" prefHeight="25.0" prefWidth="300.0" AnchorPane.leftAnchor="189.0" AnchorPane.topAnchor="120.0">
+            <font>
+                <Font name="Open Sans" size="15.0" />
+            </font>
+        </TextField>
+        <Text fill="WHITE" layoutX="64.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%account.text.homeaddress" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="177.0">
+            <font>
+                <Font name="Open Sans" size="17.0" />
+            </font>
+        </Text>
+        <TextField fx:id="homeAddress" layoutX="190.0" layoutY="180.0" prefHeight="25.0" prefWidth="300.0" AnchorPane.leftAnchor="189.0" AnchorPane.topAnchor="177.0">
+            <font>
+                <Font name="Open Sans" size="15.0" />
+            </font>
+        </TextField>
+        <Text fill="WHITE" layoutX="66.0" layoutY="253.43505859375" strokeType="OUTSIDE" strokeWidth="0.0" text="%account.text.country" AnchorPane.leftAnchor="66.0" AnchorPane.topAnchor="237.6552734375">
+            <font>
+                <Font name="Open Sans" size="17.0" />
+            </font>
+        </Text>
+        <TextField fx:id="country" layoutX="190.0" layoutY="313.0" prefHeight="25.0" prefWidth="300.0" AnchorPane.leftAnchor="189.0" AnchorPane.topAnchor="234.0">
+            <font>
+                <Font name="Open Sans" size="15.0" />
+            </font>
+        </TextField>
+        <Text fill="WHITE" layoutX="65.0" layoutY="360.77978515625" strokeType="OUTSIDE" strokeWidth="0.0" text="%account.text.password" AnchorPane.leftAnchor="65.0" AnchorPane.topAnchor="345.0">
+            <font>
+                <Font name="Open Sans" size="17.0" />
+            </font>
+        </Text>
+          <TextField fx:id="email" layoutX="190.0" layoutY="473.0" prefHeight="25.0" prefWidth="300.0" AnchorPane.topAnchor="291.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="password" layoutX="190.0" layoutY="339.0" prefHeight="28.0" prefWidth="300.0" AnchorPane.leftAnchor="188.0" AnchorPane.topAnchor="339.0" />
+     
+        <Button id="markAll" layoutX="64.0" layoutY="425.0" mnemonicParsing="false" onAction="#editAction" prefHeight="30.0" prefWidth="170.0" text="%common.button.edit" textFill="WHITE" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="425.0">
+            <font>
+                <Font name="Open Sans" size="15.0" />
+            </font>
+        </Button>
+        <Button id="saveAccount" layoutX="274.0" layoutY="425.0" mnemonicParsing="false" onAction="#saveButtonAction" prefHeight="30.0" prefWidth="170.0" text="%common.button.save" textFill="WHITE" AnchorPane.leftAnchor="274.0" AnchorPane.topAnchor="425.0">
+            <font>
+                <Font name="Open Sans" size="15.0" />
+            </font>
+        </Button>
+      <Text fill="WHITE" layoutX="65.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%account.text.email">
+         <font>
+            <Font name="Open Sans" size="17.0" />
+         </font>
+      </Text>
+     <fx:include source="CommonFooter.fxml" />
+    </children>
+   <styleClass>
+      <String fx:value="root" />
+      <String fx:value="layout-resolution-includes" />
+      <String fx:value="text" />
+   </styleClass>
+</AnchorPane>

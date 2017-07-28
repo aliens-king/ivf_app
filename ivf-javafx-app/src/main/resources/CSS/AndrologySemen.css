@@ -1,0 +1,31 @@
+.body{
+	-fx-background-color: #2980B9;
+}
+.text {
+	-fx-font-size: 14px;
+	-fx-text-fill: #FFFFFF;
+}
+.andrologytextsize .text{
+	-fx-font-size: 16px;
+	-fx-text-fill: #FFFFFF;
+}
+.headercolor {
+	
+	-fx-background-color:#06aad9;
+	-fx-text-fill: #FFFFFF;
+}
+#rowHeading {
+  -fx-alignment: CENTER_RIGHT;
+}
+
+.GridPaneClass{
+	-fx-background-color :White;
+	-fx-border-width: 1;
+	-fx-border-color: black;
+}
+.grid .text{
+	
+	-fx-background-color:#929292;
+	-fx-font-size: 18px;
+	
+}

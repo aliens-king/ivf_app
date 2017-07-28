@@ -1,0 +1,128 @@
+.root {
+    -fx-opacity: 0.95;
+
+    -fx-background-color: palegreen;
+    -fx-background-insets: 5;
+    -fx-background-radius: 10;
+}
+
+#directory {
+    -fx-background-image: url("/icons/back_btn.png");
+    -fx-background-color:  #389FE2;
+    -fx-background-radius: 20;
+    -fx-background-insets: 0,2,2,2,0;
+    -fx-padding: 9 9 9 9;
+}
+#directory:hover:pressed{
+    -fx-background-image: url("/icons/back_btn_blue.png");
+    -fx-background-color:  #ffffff;
+}
+
+#directory:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}
+
+#logOut {
+    -fx-background-image: url("/icons/logout_btn.png");
+    -fx-background-color: #389FE2;
+}
+
+#minimize {
+    -fx-background-image: url("/icons/minimize.png");
+    -fx-background-color:  #389FE2;
+}
+
+#exit {
+
+    -fx-background-image: url("/icons/exit_btn.png");
+    -fx-background-color:#389FE2;
+}
+
+#interfaceButton{
+    -fx-background-color: #3CBAFF;
+}
+
+#interfaceButton:hover:pressed{
+    -fx-background-color: #004A6F;
+}
+
+#interfaceButton:hover{
+    -fx-background-color: linear-gradient(#3ABDFF,  #71D0FF);
+}
+
+#deleteSelected {
+    -fx-background-color: #B73630;
+}
+#deleteSelected:hover:pressed{
+    -fx-background-color: #932C26;
+}
+#deleteSelected:hover{
+    -fx-background-color: linear-gradient(#B73630, #CE4D46);
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-alignment: CENTER-LEFT;
+    -fx-font-family: "Open Sans";
+}
+.table-view .column-header {
+    -fx-background-color: #3CBAFF;
+    -fx-background-insets: 0.0, 0.0 0.0 0.0 0.0;
+    -fx-border-insets: 0;
+    -fx-border-width: 1px;
+    -fx-border-color: white;
+    -fx-border-width: 0 1 0 0;
+    -fx-size: 20px;
+}
+
+.table-view-cell:empty             { -fx-background-color: cornsilk;    }
+.table-view-cell:empty .table-cell { -fx-border-width:     0px;         }
+
+.date-picker .arrow{
+    -fx-background-color: #ffffff;
+}
+
+.date-picker .arrow-button{
+    -fx-background-color: #3ABDFF;
+}
+
+#checkBox{
+    -fx-padding: 3px;
+    -fx-background-color: #47BEF8;
+}
+
+#spinner1 .arrow{
+    -fx-background-color: #ffffff;
+}
+
+#spinner1 .arrow-button{
+    -fx-background-color: #3ABDFF;
+}
+
+.date-picker-popup > * > .spinner {
+    -fx-background-color: transparent;
+}
+.date-picker-popup > .month-year-pane  {
+    -fx-background-color:  #3ABDFF;
+}
+.date-picker .day-name-cell{
+   -fx-background-color: #88d7ff;
+}
+.date-picker-popup > * > .day-cell  {
+    -fx-background-color:  #c3ebff;
+    -fx-font-size: 12 px;
+}
+.date-picker-popup > * > .day-cell:hover {
+    -fx-background-color: #34AAE5;
+}
+.date-picker-popup > * > .previous-month,
+.date-picker-popup > * > .next-month {
+   -fx-background-color: #ebf8ff;
+}
+.date-picker-popup > * > .previous-month:hover,
+.date-picker-popup > * > .next-month:hover {
+   -fx-background-color: #C0C0C0;
+}
+.date-picker-popup {
+     -fx-background-color: #2980b9;
+}

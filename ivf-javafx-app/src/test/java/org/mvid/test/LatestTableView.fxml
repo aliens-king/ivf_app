@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mvid.test.TableViewController">
+   <content>
+      <Group>
+         <children>
+            <GridPane prefHeight="249.0" prefWidth="604.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.0" minWidth="10.0" prefWidth="75.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="363.0" minWidth="10.0" prefWidth="247.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="10.0" prefWidth="272.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="119.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="219.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TableView fx:id="embryoTable" prefHeight="74.0" prefWidth="594.0" GridPane.columnSpan="3" GridPane.rowIndex="1">
+                    <columns>
+                      <TableColumn fx:id="cycle" prefWidth="75.0" text="Cycle" />
+                      <TableColumn fx:id="srNo" prefWidth="75.0" text="Sr No" />
+                        <TableColumn fx:id="quality" prefWidth="75.0" text="Quality" />
+                        <TableColumn fx:id="used" prefWidth="84.0" text="Used" />
+                        <TableColumn fx:id="embSrNo" prefWidth="97.0" text="Sr No" />
+                        <TableColumn fx:id="embQuality" prefWidth="82.0" text="Quality" />
+                        <TableColumn fx:id="embDateOfUse" prefWidth="94.0" text="Date Of Use" />
+                    </columns>
+                  </TableView>
+                  <Label alignment="CENTER" prefHeight="16.0" prefWidth="256.0" text="Egg" GridPane.columnIndex="1" />
+                  <Label alignment="CENTER" prefHeight="16.0" prefWidth="273.0" text="Embryo" GridPane.columnIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+      </Group>
+   </content>
+</ScrollPane>

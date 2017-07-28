@@ -1,0 +1,18 @@
+.radio-button {
+	-fx-font-size: 12px;
+}
+
+.radio-button .radio {
+    -fx-border-width: 1px;
+    -fx-border-color: #000;
+    -fx-background-color: white;
+    -fx-border-radius: 15px;
+    -fx-padding: 0px;
+}
+
+
+.radio-button .dot {
+    -fx-background-radius: 15px;
+    -fx-padding: 3px;
+  	-fx-mark-color: #3CBAFF ;
+}

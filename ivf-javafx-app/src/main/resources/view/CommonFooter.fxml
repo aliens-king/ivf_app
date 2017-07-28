@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<!-- <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="footerLabel" stylesheets="@../CSS/mvid.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="23.0" layoutY="314.0" styleClass="footerLabel" stylesheets="@../CSS/mvid.css" text="Copyright MVID-CODE (2015-2025) -All rights reserved" />
+      <Label layoutX="659.0" layoutY="300.0" prefHeight="20.0" prefWidth="155.0" styleClass="footerLabel" text="TODAY'S DATE :  " />
+      <Label fx:id="currentDateLabel" layoutX="801.0" layoutY="299.0" prefHeight="19.0" prefWidth="90.0" styleClass="footerLabel" text="Date Here" />
+      <Label layoutX="959.0" layoutY="292.0" prefHeight="20.0" prefWidth="124.0" styleClass="footerLabel" text="CREATED BY: " />
+      <Label layoutX="1080.0" layoutY="291.0" styleClass="footerLabel" text="Oluwasegun Babatunde" />
+      <ImageView fitHeight="75.0" fitWidth="185.0" layoutX="1330.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane> -->
+
+<AnchorPane prefHeight="48.0" stylesheets="@../CSS/mvid.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.CommonFooterController">
+         <children>
+<!--          	<Label text="" prefWidth="64.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="64.0"/> -->
+            <GridPane alignment="BOTTOM_LEFT" layoutY="9.0" prefHeight="30.0" prefWidth="208.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="42.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="40.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints />
+            <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" styleClass="footerLabel" text="%footer.label.copywrite.message" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets top="16.0" />
+               </GridPane.margin></Label>
+                  <ImageView fitHeight="39.0" fitWidth="60.0" layoutX="30.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                     <image>
+                        <Image url="@../images/ivf%20(2).png" />
+                     </image>
+               <cursor>
+                  <Cursor fx:constant="S_RESIZE" />
+               </cursor>
+                  </ImageView>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>

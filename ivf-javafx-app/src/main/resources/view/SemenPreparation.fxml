@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="2000.0" maxWidth="2000.0" prefHeight="836.0" prefWidth="1435.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.EmbryologySemenPreparationController">
+   <children>
+      <GridPane layoutX="56.0" layoutY="487.0" prefHeight="245.0" prefWidth="819.0" styleClass="GridPaneClass" stylesheets="@../CSS/SemenPreparation.css" AnchorPane.bottomAnchor="90.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="271.0" minWidth="10.0" prefWidth="271.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="20.0" />
+          <ColumnConstraints halignment="CENTER" maxWidth="276.0" minWidth="10.0" prefWidth="262.0" />
+            <ColumnConstraints halignment="CENTER" maxWidth="278.0" minWidth="10.0" prefWidth="262.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="volumeRawSemenTextField" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="densityRawSemenTextField" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="totalMotilityABC_RawSemenTextField" editable="false" text="%andrologysemen.textfield.aplusbplusc" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField fx:id="totalMotilityAB_RawSemenTextField" editable="false" text="%andrologysemen.textfield.aplusb" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+           
+            <TextField fx:id="motilityARawSemenTextField" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <TextField fx:id="motilityBRawSemenTextField" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <TextField fx:id="motilityCRawSemenTextField" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <TextField fx:id="motilityDRawSemenTextField" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <TextField fx:id="morphologyRawSemenTextField" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+            <TextField fx:id="roundCellsRawSemenTextField" prefHeight="12.0" prefWidth="262.0" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+           
+           
+            <TextField fx:id="volumePreparedSemenTextField" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="densityPreparedSemenTextField" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextField fx:id="totalMotilityABC_PreparedSemenTextField" editable="false" text="%andrologysemen.textfield.aplusbplusc" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <TextField fx:id="totalMotilityAB_PreparedSemenTextField" editable="false" text="%andrologysemen.textfield.aplusb" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <TextField fx:id="motilityAPreparedSemenTextField" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <TextField fx:id="motilityBPreparedSemenTextField" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <TextField fx:id="motilityCPreparedSemenTextField" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            <TextField fx:id="motilityDPreparedSemenTextField" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+            <TextField fx:id="morphologyPreparedSemenTextField" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+            <TextField fx:id="roundCellsPreparedSemenTextField" maxHeight="-Infinity" prefHeight="14.0" prefWidth="262.0" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+            <Label alignment="CENTER" prefHeight="41.0" prefWidth="296.0" styleClass="blueLabelClass" text="%embryology.semenprepration.label.semenprepration" GridPane.columnSpan="2">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label alignment="CENTER" prefHeight="41.0" prefWidth="261.0" styleClass="blueLabelClass" text="%andrologysemen.label.rawsemen" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="41.0" prefWidth="261.0" styleClass="blueLabelClass" text="%embryology.semenprepration.label.preparedsemen" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+            <Label styleClass="gridLabel" text="%embryology.semenprepration.label.volume" GridPane.rowIndex="1">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label styleClass="gridLabel" text="%andrologysemen.text.density" GridPane.rowIndex="2">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label styleClass="gridLabel" text="%andrologysemen.text.totalmolality" GridPane.rowIndex="3">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label styleClass="gridLabel" text="%andrologysemen.text.a" GridPane.rowIndex="5">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label styleClass="gridLabel" text="%andrologysemen.text.b" GridPane.rowIndex="6">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label styleClass="gridLabel" text="%andrologysemen.text.c" GridPane.rowIndex="7">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label styleClass="gridLabel" text="%andrologysemen.text.d" GridPane.rowIndex="8">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label styleClass="gridLabel" text="%andrologysemen.text.morphology" GridPane.rowIndex="9">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label styleClass="gridLabel" text="%andrologysemen.text.roundcells" GridPane.rowIndex="10">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+      <VBox alignment="TOP_CENTER" layoutX="880.0" layoutY="509.0" prefHeight="245.0" prefWidth="150.0" AnchorPane.bottomAnchor="90.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="37.0" prefWidth="150.0" styleClass="blueLabelClass" stylesheets="@../CSS/SemenPreparation.css" text="%common.label.remarks" />
+            <TextArea id="remarks" fx:id="remarksTextArea" prefHeight="215.0" prefWidth="150.0" wrapText="true" />
+         </children>
+      </VBox>
+      <GridPane layoutX="1040.0" layoutY="484.0" prefHeight="158.0" prefWidth="293.0" AnchorPane.bottomAnchor="182.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="130.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="140.0" styleClass="blueLabelClass" text="%andrologysemen.label.timeprocessed" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="140.0" styleClass="blueLabelClass" text="%andrologysemen.label.timeproduced" GridPane.rowIndex="1" />
+            <Button fx:id="editBtn" mnemonicParsing="false" onAction="#editAction" prefHeight="30.0" prefWidth="140.0" text="%common.button.edit" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#saveAction" prefHeight="30.0" prefWidth="145.0" text="%common.button.save" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#printPageAction" prefHeight="30.0" prefWidth="292.0" text="%common.button.print.form" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+            <TextField fx:id="timeProcessedTextField" prefHeight="30.0" prefWidth="121.0" GridPane.columnIndex="1" />
+            <TextField fx:id="timeProducedTextField" prefHeight="30.0" prefWidth="130.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+          <!--   <CalendarTextField fx:id="setupdate" prefWidth="200.0" showTime="true"  GridPane.columnIndex="1" /> -->
+         </children>
+      </GridPane>
+      <fx:include fx:id="commonDetail" source="CommonDetail.fxml" />
+      <fx:include fx:id="investigationCommon" source="Investigation.fxml" />
+      <fx:include source="CommonFooter.fxml" />
+      <GridPane hgap="15.0" layoutX="54.0" layoutY="437.0" prefWidth="819.0" vgap="10.0" AnchorPane.leftAnchor="54.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ComboBox fx:id="useComboBox" prefHeight="26.0" prefWidth="162.0" GridPane.columnIndex="1" />
+            <ComboBox fx:id="viscosityComboBox" prefHeight="26.0" prefWidth="162.0" GridPane.columnIndex="3" />
+            <ComboBox fx:id="agglutinationComboBox" prefHeight="26.0" prefWidth="162.0" GridPane.columnIndex="5" />
+            <TextField fx:id="mediaAddedTextField" prefHeight="26.0" prefWidth="90.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="debrisComboBox" prefHeight="26.0" prefWidth="162.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <ComboBox fx:id="aggregationComboBox" prefWidth="162.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Label text="%andrologysemen.label.use">
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="sementextsize" />
+               </styleClass>
+            </Label>
+            <Label text="%andrologysemen.label.aggregation" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="sementextsize" />
+               </styleClass>
+            </Label>
+            <Label text="%andrologysemen.label.aggrlutination" GridPane.columnIndex="4">
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="sementextsize" />
+               </styleClass>
+            </Label>
+            <Label text="%andrologysemen.label.debris" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="sementextsize" />
+               </styleClass>
+            </Label>
+            <Label text="%andrologysemen.label.viscosity" GridPane.columnIndex="2">
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="sementextsize" />
+               </styleClass>
+            </Label>
+            <Label text="%andrologysemen.label.mediaadded" GridPane.rowIndex="1">
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="sementextsize" />
+               </styleClass>
+            </Label>
+         </children>
+      </GridPane>
+      <GridPane layoutX="1040.0" layoutY="515.0" maxHeight="110.0" maxWidth="250.0" prefHeight="120.0" prefWidth="275.0" styleClass="registrant-gridpane" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="1040.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="30.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="70.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label styleClass="text" text="%common.emb.registrant" />
+            <Label styleClass="text" text="%common.dr.registrant" GridPane.rowIndex="1" />
+            <TextField fx:id="embRegistrant" prefHeight="30.0" GridPane.columnIndex="1" />
+            <TextField fx:id="drRegistrant" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#saveRegistrant" prefHeight="30.0" prefWidth="250.0" text="%common.registrants.save" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+   <stylesheets>
+      <URL value="@../CSS/mvid.css" />
+      <URL value="@../CSS/SemenPreparation.css" />
+   </stylesheets>
+   <styleClass>
+      <String fx:value="body" />
+      <String fx:value="layout-resolution-includes" />
+   </styleClass>
+</AnchorPane>

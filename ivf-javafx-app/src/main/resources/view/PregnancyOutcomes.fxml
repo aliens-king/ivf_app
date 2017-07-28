@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="2000.0" maxWidth="2000.0" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../CSS/PregnancyOutcomes.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.PregnancyOutcomesController">
+   <children>
+      <fx:include fx:id="commonDetail" source="CommonDetail.fxml" />
+     <fx:include fx:id="investigationCommon" source="Investigation.fxml" />
+      <GridPane gridLinesVisible="true" layoutX="176.0" layoutY="465.0" prefHeight="230.0" prefWidth="830.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="34.0" minHeight="5.0" prefHeight="21.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="340.0" styleClass="label-text" text="%cycles.tablecolum.pregnencyoutcome" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" contentDisplay="CENTER" styleClass="text" text="%pregnancy.outcomes.biochemical" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" contentDisplay="CENTER" styleClass="text" text="%pregnancy.outcomes.clinical" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" contentDisplay="CENTER" styleClass="text" text="%pregnancy.outcomes.live_birth" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="324.0" styleClass="label-text" text="%pregnancy.outcomes.value" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="339.0" styleClass="label-text" text="%pregnancy.outcomes.date" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="101.0" prefWidth="281.0" styleClass="label-text" text="%pregnancy.outcomes.action" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <ComboBox fx:id="biochemicalComboBox" prefHeight="27.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <ComboBox fx:id="liveBirthComboBox" prefHeight="27.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <ComboBox fx:id="clinicalComboBox" prefHeight="27.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#saveBiochemicalAction" prefHeight="30.0" prefWidth="150.0" text="%pregnancy.outcomes.biochemical.button" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#saveLiveBirthAction" prefHeight="30.0" prefWidth="150.0" text="%pregnancy.outcomes.live_birth.button" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#saveClinicalAction" prefHeight="30.0" prefWidth="150.0" text="%pregnancy.outcomes.clinical.button" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <TextField fx:id="biochemicalDateLabel" alignment="CENTER" maxWidth="160.0" minWidth="150.0" prefHeight="30.0" prefWidth="150.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <TextField fx:id="liveBirthDateLabel" alignment="CENTER" maxWidth="160.0" minWidth="150.0" prefHeight="30.0" prefWidth="150.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <TextField fx:id="clinicalDateLabel" alignment="CENTER" maxWidth="160.0" minWidth="150.0" prefHeight="30.0" prefWidth="150.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+      <VBox layoutX="1030.0" layoutY="465.0" prefHeight="230.0" prefWidth="150.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" minHeight="5.0" prefHeight="55.0" prefWidth="150.0" styleClass="label-text" text="%common.label.remarks" />
+            <TextArea fx:id="remarksTextArea" prefHeight="226.0" prefWidth="161.0" wrapText="true" />
+         </children>
+      </VBox>
+      <VBox layoutX="1200.0" layoutY="465.0" spacing="15.0">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#editRemarksAction" prefHeight="30.0" prefWidth="140.0" text="%pregnancy.outcomes.edit.button" />
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#saveAction" prefHeight="30.0" prefWidth="140.0" text="%pregnancy.outcomes.save.button" />
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#printFormAction" prefHeight="30.0" prefWidth="140.0" text="%common.button.print.form" />
+         </children>
+      </VBox>
+      <GridPane gridLinesVisible="true" layoutX="56.0" layoutY="465.0" prefHeight="230.0" prefWidth="120.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="35.0" minHeight="5.0" prefHeight="31.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="206.0" minHeight="10.0" prefHeight="203.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="157.0" styleClass="label-text" text="%pregnancy.outcomes.cycle" />
+            <TextField fx:id="cycleDateTextField" alignment="CENTER" maxWidth="100.0" prefHeight="30.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+      <fx:include source="CommonFooter.fxml" />
+      <GridPane layoutX="1202.0" layoutY="608.0" maxHeight="110.0" maxWidth="250.0" prefHeight="120.0" prefWidth="275.0" styleClass="registrant-gridpane">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="30.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="70.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label styleClass="text" text="%common.emb.nurse.registrant" />
+            <Label styleClass="text" text="%common.emb.asst.nurse.registrant" GridPane.rowIndex="1" />
+            <TextField fx:id="nurseRegistrant" prefHeight="30.0" GridPane.columnIndex="1" />
+            <TextField fx:id="asstNurseRegistrant" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#saveRegistrant" prefHeight="30.0" prefWidth="250.0" text="%common.registrants.save" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+   <styleClass>
+      <String fx:value="body" />
+      <String fx:value="layout-resolution-includes" />
+   </styleClass>
+</AnchorPane>

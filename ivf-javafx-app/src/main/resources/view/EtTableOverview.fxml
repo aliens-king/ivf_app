@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="etTableOverview" prefHeight="353.0" prefWidth="342.0" stylesheets="@../CSS/appointmentOverview.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.EtTableController">
+   <styleClass>
+      <String fx:value="root" />
+      <String fx:value="layout-resolution-includes" />
+   </styleClass>
+   <children>
+      <TableView id="appointmentTable" fx:id="etTable" layoutX="71.0" layoutY="98.0" prefHeight="540.0" prefWidth="1342.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="100.0">
+         <columns>
+            <TableColumn fx:id="etTimeColumn" text="%appointmentoverview.tablecolumn.time" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <HBox alignment="CENTER" layoutX="84.0" layoutY="24.0" prefHeight="50.0" prefWidth="254.0" spacing="100.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <Button fx:id="previousButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#previousPageAction" prefWidth="150.0" text="%common.button.previous" />
+            <Button fx:id="nextButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#nextPageAction" prefWidth="150.0" text="%common.button.next" />
+         </children>
+      </HBox>
+      <fx:include source="CommonFooter.fxml" />
+   </children>
+</AnchorPane>

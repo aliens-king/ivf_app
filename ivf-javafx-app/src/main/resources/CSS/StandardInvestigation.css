@@ -1,0 +1,15 @@
+.body{
+	-fx-background-color: #2980B9;
+}
+
+.headercolor {
+
+	-fx-background-color:#06aad9;
+	-fx-text-fill: #FFFFFF;
+}
+.grid .text{
+
+	-fx-background-color:#929292;
+	-fx-font-size: 18px;
+
+}

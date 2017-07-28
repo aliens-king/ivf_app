@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="patientFileBorderPane" prefHeight="855.0" prefWidth="1084.0" style="-fx-scale-shape: true;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.PatientFileController">
+    <top>
+        <AnchorPane prefHeight="110.0" prefWidth="1066.0" style="-fx-background-color: #389FE2;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="71.0" fitWidth="71.0" layoutX="31.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="20.0">
+                    <image>
+                        <Image url="@../icons/user_account.png" />
+                    </image>
+                </ImageView>
+                <Text fx:id="loginText" fill="#ecf0f1" layoutX="124.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.text.text" AnchorPane.leftAnchor="124.0" AnchorPane.topAnchor="41.3388671875">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Text>
+                <Button id="exit" fx:id="closeButton" layoutX="986.0" layoutY="36.0" mnemonicParsing="false" onAction="#handleCloseButton" prefHeight="40.0" prefWidth="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="36.0">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button id="logOut" fx:id="logOutButton" layoutX="916.0" layoutY="36.0" mnemonicParsing="false" onAction="#logOutAction" prefHeight="40.0" prefWidth="40.0" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="36.0">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button id="directory" fx:id="directoryButton" layoutX="846.0" layoutY="36.0" mnemonicParsing="false" onAction="#directoryAction" prefHeight="40.0" prefWidth="40.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="36.0">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            <Label fx:id="administratorWarningLabel" layoutX="124.0" layoutY="81.0" textFill="WHITE" />
+            <Button id="minimize" fx:id="minimize" layoutX="1034.0" layoutY="31.0" mnemonicParsing="false" onAction="#minimizeAction" prefHeight="48.0" prefWidth="48.0" AnchorPane.rightAnchor="103.0" AnchorPane.topAnchor="31.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </AnchorPane>
+    </top>
+   <center>
+        <AnchorPane maxHeight="2000.0" maxWidth="2000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="832.0" prefWidth="1185.0" style="-fx-background-color: #2980b9;" BorderPane.alignment="CENTER">
+            <children>
+                <Text fill="WHITE" layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.womaninfo.title" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="10.0">
+                    <font>
+                        <Font name="Open Sans" size="20.0" />
+                    </font>
+                </Text>
+                <Text fill="WHITE" layoutX="56.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.surname" AnchorPane.leftAnchor="56.0" AnchorPane.topAnchor="56.6552734375">
+                    <font>
+                        <Font name="Open Sans" size="17.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="womanSurnameTextField" layoutX="181.0" layoutY="54.0" prefHeight="25.0" prefWidth="250.0" text="fvdfv" AnchorPane.leftAnchor="181.0" AnchorPane.topAnchor="54.0" />
+                <Text fill="WHITE" layoutX="58.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.firstname" AnchorPane.leftAnchor="56.0" AnchorPane.topAnchor="94.0">
+                    <font>
+                        <Font name="Open Sans" size="17.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="womanFirstNameTextField" layoutX="181.0" layoutY="104.0" prefHeight="17.0" prefWidth="250.0" AnchorPane.leftAnchor="181.0" AnchorPane.topAnchor="94.0">
+                    <font>
+                        <Font name="Open Sans" size="13.0" />
+                    </font>
+                </TextField>
+                <Text fill="WHITE" layoutX="59.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.middlename" AnchorPane.leftAnchor="56.0" AnchorPane.topAnchor="134.6552734375">
+                    <font>
+                        <Font name="Open Sans" size="17.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="womanMiddleNameTextField" layoutX="181.0" layoutY="154.0" prefHeight="17.0" prefWidth="250.0" AnchorPane.leftAnchor="181.0" AnchorPane.topAnchor="134.0">
+                    <font>
+                        <Font name="Open Sans" size="13.0" />
+                    </font>
+                </TextField>
+                <Text fill="WHITE" layoutX="31.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.partnerinfo.title" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="217.0">
+                    <font>
+                        <Font name="Open Sans" size="20.0" />
+                    </font>
+                </Text>
+                <Text fill="WHITE" layoutX="64.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.surname" AnchorPane.leftAnchor="56.0" AnchorPane.topAnchor="264.0">
+                    <font>
+                        <Font name="Open Sans" size="17.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="partnerSurnameTextField" layoutX="185.0" layoutY="262.0" prefHeight="17.0" prefWidth="250.0" AnchorPane.leftAnchor="181.0" AnchorPane.topAnchor="262.0">
+                    <font>
+                        <Font name="Open Sans" size="13.0" />
+                    </font>
+                </TextField>
+                <Text fill="WHITE" layoutX="59.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.firstname" AnchorPane.leftAnchor="56.0" AnchorPane.topAnchor="304.0">
+                    <font>
+                        <Font name="Open Sans" size="17.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="partnerFirstNameTextField" layoutX="184.0" layoutY="312.0" prefHeight="17.0" prefWidth="250.0" AnchorPane.leftAnchor="181.0" AnchorPane.topAnchor="302.0">
+                    <font>
+                        <Font name="Open Sans" size="13.0" />
+                    </font>
+                </TextField>
+                <Text fill="WHITE" layoutX="59.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.middlename" AnchorPane.leftAnchor="56.0" AnchorPane.topAnchor="344.6552734375">
+                    <font>
+                        <Font name="Open Sans" size="17.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="partnerMiddleNameTextField" layoutX="184.0" layoutY="362.0" prefHeight="17.0" prefWidth="250.0" AnchorPane.leftAnchor="181.0" AnchorPane.rightAnchor="751.0" AnchorPane.topAnchor="342.0">
+                    <font>
+                        <Font name="Open Sans" size="13.0" />
+                    </font>
+                </TextField>
+                <Text fx:id="womanSurnameErrorLabel" fill="WHITE" layoutX="189.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;" AnchorPane.leftAnchor="182.0" AnchorPane.topAnchor="80.0">
+                    <font>
+                        <Font size="12.0" />
+                    </font>
+                </Text>
+                <Text fx:id="womanFirstNameErrorLabel" fill="WHITE" layoutX="189.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;" AnchorPane.leftAnchor="182.0" AnchorPane.topAnchor="120.0">
+                    <font>
+                        <Font size="12.0" />
+                    </font>
+                </Text>
+                <Text fx:id="womanMiddleNameErrorLabel" fill="WHITE" layoutX="189.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;" AnchorPane.leftAnchor="182.0" AnchorPane.topAnchor="160.0">
+                    <font>
+                        <Font size="12.0" />
+                    </font>
+                </Text>
+                <Text fx:id="womanPhoneNumberErrorLabel" fill="WHITE" layoutX="732.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;" AnchorPane.leftAnchor="581.0" AnchorPane.topAnchor="120.0">
+                    <font>
+                        <Font name="Open Sans" size="12.0" />
+                    </font>
+                </Text>
+                <Text fx:id="womanEmailErrorLabel" fill="WHITE" layoutX="841.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;" AnchorPane.leftAnchor="581.0" AnchorPane.topAnchor="160.0">
+                    <font>
+                        <Font name="Open Sans" size="12.0" />
+                    </font>
+                </Text>
+                <Text fx:id="womanDOBErrorLabel" fill="WHITE" layoutX="612.0" layoutY="417.3447265625" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;" AnchorPane.leftAnchor="182.0" AnchorPane.topAnchor="203.0">
+                    <font>
+                        <Font name="Open Sans" size="12.0" />
+                    </font>
+                </Text>
+                <Text fx:id="manPhoneNumberErrorLabel" fill="WHITE" layoutX="732.0" layoutY="359.3447265625" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;" AnchorPane.leftAnchor="581.0" AnchorPane.topAnchor="329.0">
+                    <font>
+                        <Font name="Open Sans" size="12.0" />
+                    </font>
+                </Text>
+                <Text fx:id="manEmailErrorLabel" fill="WHITE" layoutX="712.0" layoutY="359.3447265625" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;" AnchorPane.leftAnchor="581.0" AnchorPane.topAnchor="370.0">
+                    <font>
+                        <Font name="Open Sans" size="12.0" />
+                    </font>
+                </Text>
+                <Text fx:id="manSurnameErrorLabel" fill="WHITE" layoutX="612.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;" AnchorPane.leftAnchor="182.0" AnchorPane.topAnchor="288.0">
+                    <font>
+                        <Font size="12.0" />
+                    </font>
+                </Text>
+                <Text fx:id="manMiddleNameErrorLabel" fill="WHITE" layoutX="189.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;" AnchorPane.leftAnchor="182.0" AnchorPane.topAnchor="368.0">
+                    <font>
+                        <Font size="12.0" />
+                    </font>
+                </Text>
+                <Text fx:id="manFirstNameErrorLabel" fill="WHITE" layoutX="189.0" layoutY="479.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;" AnchorPane.leftAnchor="182.0" AnchorPane.topAnchor="328.0">
+                    <font>
+                        <Font size="12.0" />
+                    </font>
+                </Text>
+                <Text fx:id="manDOBErrorLabel" fill="WHITE" layoutX="711.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;" AnchorPane.leftAnchor="182.0" AnchorPane.topAnchor="410.0">
+                    <font>
+                        <Font name="Open Sans" size="12.0" />
+                    </font>
+                </Text>
+            <Text fill="WHITE" layoutX="54.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.dob" AnchorPane.leftAnchor="56.0" AnchorPane.topAnchor="174.0">
+               <font>
+                  <Font name="Open Sans" size="17.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="324.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.age">
+               <font>
+                  <Font name="Open Sans" size="17.0" />
+               </font>
+            </Text>
+            <TextField fx:id="womanAgeTextField" layoutX="361.0" layoutY="204.0" prefHeight="25.0" prefWidth="70.0" AnchorPane.topAnchor="174.0">
+               <font>
+                  <Font name="Open Sans" size="13.0" />
+               </font>
+            </TextField>
+            <Text fill="WHITE" layoutX="65.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.dob" AnchorPane.leftAnchor="56.0">
+               <font>
+                  <Font name="Open Sans" size="17.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="324.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.age">
+               <font>
+                  <Font name="Open Sans" size="17.0" />
+               </font>
+            </Text>
+            <TextField fx:id="partnerAgeTextField" layoutX="364.0" layoutY="412.0" prefHeight="25.0" prefWidth="70.0" AnchorPane.topAnchor="382.0">
+               <font>
+                  <Font name="Open Sans" size="13.0" />
+               </font>
+            </TextField>
+            <Text fill="WHITE" layoutX="40.0" layoutY="498.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.code.treatment" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="479.435546875">
+               <font>
+                  <Font name="Open Sans" size="20.0" />
+               </font>
+            </Text>
+            <TableView fx:id="table" layoutX="54.0" layoutY="511.0" prefHeight="161.0" prefWidth="589.0" AnchorPane.leftAnchor="54.0" AnchorPane.rightAnchor="542.0" AnchorPane.topAnchor="511.0">
+              <columns>
+                  <TableColumn fx:id="codesColumn" minWidth="194.0" prefWidth="-1.0" text="%patient.code" />
+                <TableColumn fx:id="nameColumn" minWidth="194.0" prefWidth="-1.0" text="%patient.patientname" />
+                <TableColumn fx:id="scheduleColumn" minWidth="194.0" prefWidth="-1.0" text="%patient.schedule.date" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Button id="interfaceButton" layoutX="329.0" layoutY="428.0" mnemonicParsing="false" onAction="#editAction" prefHeight="31.0" prefWidth="117.0" text="%common.button.edit" textFill="WHITE" AnchorPane.leftAnchor="329.0" AnchorPane.rightAnchor="751.0" AnchorPane.topAnchor="427.0">
+               <font>
+                  <Font name="Open Sans" size="15.0" />
+               </font></Button>
+            <Button id="interfaceButton" layoutX="183.0" layoutY="427.0" mnemonicParsing="false" onAction="#saveAction" prefHeight="31.0" prefWidth="116.0" text="%common.button.save" textFill="WHITE" AnchorPane.leftAnchor="181.0" AnchorPane.rightAnchor="884.0" AnchorPane.topAnchor="427.0" />
+            <Text fill="WHITE" layoutX="52.0" layoutY="722.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.newscheduledate" AnchorPane.bottomAnchor="105.99072265625" AnchorPane.leftAnchor="54.0">
+               <font>
+                  <Font name="Open Sans" size="17.0" />
+               </font>
+            </Text>
+            <DatePicker fx:id="newStartDate" layoutX="227.0" layoutY="702.0" prefHeight="31.0" prefWidth="197.0" AnchorPane.bottomAnchor="100.0" />
+            <Button id="interfaceButton" fx:id="todayButton" layoutX="436.0" layoutY="701.0" mnemonicParsing="false" onAction="#todayAction" prefHeight="31.0" prefWidth="95.0" text="%patient.button.today" textFill="WHITE" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="436.0" />
+            <Button id="interfaceButton" fx:id="scheduleButton" layoutX="539.0" layoutY="701.0" mnemonicParsing="false" onAction="#scheduleAction" prefHeight="31.0" prefWidth="95.0" text="%patient.button.schedule" textFill="WHITE" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="539.0" AnchorPane.rightAnchor="542.0" />
+            <CheckBox id="checkBox" fx:id="allIvfCheckBox" layoutX="666.0" layoutY="461.0" mnemonicParsing="false" onAction="#allIvfAction" prefHeight="27.0" prefWidth="300.0" text="%patient.chkbox.all" textFill="WHITE" AnchorPane.rightAnchor="219.0" AnchorPane.topAnchor="461.0">
+               <font>
+                  <Font name="Open Sans" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox id="checkBox" fx:id="icsiCheckBox" layoutX="767.0" layoutY="492.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="%patient.chkbox.icsi" textFill="WHITE" AnchorPane.rightAnchor="320.0" AnchorPane.topAnchor="492.0">
+               <font>
+                  <Font name="Open Sans" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox id="checkBox" fx:id="allIvfFileCheckBox" layoutX="666.0" layoutY="492.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="%patient.chkbox.file" textFill="WHITE" AnchorPane.rightAnchor="421.0" AnchorPane.topAnchor="492.0">
+               <font>
+                  <Font name="Open Sans" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox id="checkBox" fx:id="tubesCheckBox" layoutX="868.0" layoutY="492.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="%patient.chkbox.tubes" textFill="WHITE" AnchorPane.rightAnchor="219.0" AnchorPane.topAnchor="492.0">
+               <font>
+                  <Font name="Open Sans" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox id="checkBox" fx:id="braceletCheckBox" layoutX="666.0" layoutY="522.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="%patient.chkbox.bracelet" textFill="WHITE" AnchorPane.rightAnchor="421.0" AnchorPane.topAnchor="522.0">
+               <font>
+                  <Font name="Open Sans" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox id="checkBox" fx:id="civfCheckBox" layoutX="767.0" layoutY="522.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="%patient.chkbox.civf" textFill="WHITE" AnchorPane.rightAnchor="320.0" AnchorPane.topAnchor="522.0">
+               <font>
+                  <Font name="Open Sans" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox id="checkBox" fx:id="fmCheckBox" layoutX="868.0" layoutY="522.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="%patient.chkbox.fm" textFill="WHITE" AnchorPane.rightAnchor="219.0" AnchorPane.topAnchor="522.0">
+               <font>
+                  <Font name="Open Sans" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox id="checkBox" fx:id="opuCheckbox" layoutX="666.0" layoutY="552.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="%patient.chkbox.opu" textFill="WHITE" AnchorPane.rightAnchor="421.0" AnchorPane.topAnchor="552.0">
+               <font>
+                  <Font name="Open Sans" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox id="checkBox" fx:id="denutationCheckbox" layoutX="766.0" layoutY="552.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="%patient.chkbox.denudation" textFill="WHITE" AnchorPane.rightAnchor="321.0" AnchorPane.topAnchor="552.0">
+               <font>
+                  <Font name="Open Sans" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox id="checkBox" fx:id="cmCheckbox" layoutX="868.0" layoutY="552.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="%patient.chkbox.cm" textFill="WHITE" AnchorPane.rightAnchor="219.0" AnchorPane.topAnchor="552.0">
+               <font>
+                  <Font name="Open Sans" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox id="checkBox" fx:id="biopsyCheckBox" layoutX="666.0" layoutY="582.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="%patient.chkbox.biopsy" textFill="WHITE" AnchorPane.rightAnchor="421.0" AnchorPane.topAnchor="582.0">
+               <font>
+                  <Font name="Open Sans" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox id="checkBox" fx:id="strawSCheckBox" layoutX="767.0" layoutY="582.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="%patient.chkbox.straw.s" textFill="WHITE" AnchorPane.rightAnchor="320.0" AnchorPane.topAnchor="582.0">
+               <font>
+                  <Font name="Open Sans" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox id="checkBox" fx:id="bmCheckBox" layoutX="868.0" layoutY="582.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="%patient.chkbox.bm" textFill="WHITE" AnchorPane.rightAnchor="219.0" AnchorPane.topAnchor="582.0">
+               <font>
+                  <Font name="Open Sans" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox id="checkBox" fx:id="iuiCheckBox" layoutX="666.0" layoutY="612.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="%patient.chkbox.iui" textFill="WHITE" AnchorPane.rightAnchor="421.0" AnchorPane.topAnchor="612.0">
+               <font>
+                  <Font name="Open Sans" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox id="checkBox" fx:id="strawECheckBox" layoutX="767.0" layoutY="612.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="%patient.chkbox.straw.e" textFill="WHITE" AnchorPane.rightAnchor="320.0" AnchorPane.topAnchor="612.0">
+               <font>
+                  <Font name="Open Sans" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox id="checkBox" fx:id="semenPotCheckBox" layoutX="868.0" layoutY="612.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="%patient.chkbox.semenpot" textFill="WHITE" AnchorPane.rightAnchor="219.0" AnchorPane.topAnchor="612.0">
+               <font>
+                  <Font name="Open Sans" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox id="checkBox" fx:id="allMedicalFileCheckbox" layoutX="969.0" layoutY="492.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="%patient.chkbox.file" textFill="WHITE" AnchorPane.rightAnchor="118.0" AnchorPane.topAnchor="492.0">
+               <font>
+                  <Font name="Open Sans" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox id="checkBox" fx:id="potCheckbox" layoutX="969.0" layoutY="522.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="%patient.chkbox.pot" textFill="WHITE" AnchorPane.rightAnchor="118.0" AnchorPane.topAnchor="522.0">
+               <font>
+                  <Font name="Open Sans" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox id="checkBox" fx:id="strawCheckBox" layoutX="969.0" layoutY="552.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="%patient.chkbox.straw" textFill="WHITE" AnchorPane.rightAnchor="118.0" AnchorPane.topAnchor="552.0">
+               <font>
+                  <Font name="Open Sans" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox id="checkBox" fx:id="biopsyMedicalCheckBox" layoutX="969.0" layoutY="582.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="%patient.chkbox.biopsy.allmedicallab" textFill="WHITE" AnchorPane.rightAnchor="118.0" AnchorPane.topAnchor="582.0">
+               <font>
+                  <Font name="Open Sans" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox id="checkBox" fx:id="specialPotCheckBox" layoutX="969.0" layoutY="612.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="%patient.chkbox.specialpot" textFill="WHITE" AnchorPane.rightAnchor="118.0" AnchorPane.topAnchor="612.0">
+               <font>
+                  <Font name="Open Sans" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox id="checkBox" fx:id="allMedicalCheckBox" layoutX="968.0" layoutY="461.0" mnemonicParsing="false" onAction="#allMedicalAction" prefHeight="27.0" prefWidth="177.0" text="%patient.chkbox.allmediallab" textFill="WHITE" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="461.0">
+               <font>
+                  <Font name="Open Sans" size="12.0" />
+               </font>
+            </CheckBox>
+            <Button id="interfaceButton" layoutX="664.0" layoutY="644.0" mnemonicParsing="false" onAction="#printAction" prefHeight="18.0" prefWidth="178.0" text="%patient.button.print" textFill="WHITE" AnchorPane.rightAnchor="343.0" AnchorPane.topAnchor="644.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <CheckBox id="checkBox" fx:id="vialsCheckBox" layoutX="846.0" layoutY="645.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="120.0" text="%patient.botton.vials" textFill="WHITE" AnchorPane.rightAnchor="219.0">
+               <font>
+                  <Font name="Open Sans" size="14.0" />
+               </font>
+            </CheckBox>
+            <Spinner id="spinner1" fx:id="spinnerBox" layoutX="614.0" layoutY="178.0" prefHeight="65.0" prefWidth="122.0" />
+            <Text fx:id="advertismentText" fill="#ae1c17" layoutX="56.0" layoutY="697.0" strokeType="OUTSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="88.7333984375" AnchorPane.leftAnchor="56.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="454.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.address" AnchorPane.leftAnchor="445.0" AnchorPane.topAnchor="56.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <TextField fx:id="womanHomeAddressTextField" layoutX="630.0" layoutY="52.0" prefHeight="25.0" prefWidth="250.0" AnchorPane.leftAnchor="580.0" AnchorPane.topAnchor="54.0" />
+            <Text fill="WHITE" layoutX="453.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.phoneNumber" AnchorPane.leftAnchor="445.0" AnchorPane.topAnchor="96.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <TextField fx:id="womanPhoneNumberTextField" layoutX="602.0" layoutY="94.0" prefHeight="25.0" prefWidth="250.0" AnchorPane.leftAnchor="580.0" AnchorPane.topAnchor="94.0" />
+            <Text fill="WHITE" layoutX="449.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.email" AnchorPane.leftAnchor="445.0" AnchorPane.topAnchor="136.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <TextField fx:id="womanEmailTextField" layoutX="579.0" layoutY="132.0" prefHeight="25.0" prefWidth="250.0" AnchorPane.leftAnchor="580.0" AnchorPane.topAnchor="134.0" />
+            <Text fill="WHITE" layoutX="445.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.address" AnchorPane.leftAnchor="445.0" AnchorPane.topAnchor="264.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <TextField fx:id="partnerHomeAddressTextField" layoutX="587.0" layoutY="260.0" prefHeight="25.0" prefWidth="250.0" AnchorPane.leftAnchor="580.0" AnchorPane.topAnchor="262.0" />
+            <Text fill="WHITE" layoutX="445.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.phoneNumber" AnchorPane.leftAnchor="445.0" AnchorPane.topAnchor="304.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <TextField fx:id="partnerPhoneNumberTextField" layoutX="587.0" layoutY="308.0" prefHeight="25.0" prefWidth="250.0" AnchorPane.leftAnchor="580.0" AnchorPane.topAnchor="302.0" />
+            <Text fill="WHITE" layoutX="454.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.email" AnchorPane.leftAnchor="445.0" AnchorPane.topAnchor="344.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <TextField fx:id="partnerEmailTextField" layoutX="572.0" layoutY="351.0" prefHeight="25.0" prefWidth="250.0" AnchorPane.leftAnchor="580.0" AnchorPane.topAnchor="342.0" />
+            <Button id="deleteSelected" layoutX="664.0" layoutY="703.0" mnemonicParsing="false" onAction="#embryologyAction" prefHeight="31.0" prefWidth="175.0" text="%patient.button.treatment" textFill="WHITE" AnchorPane.bottomAnchor="100.0" />
+            <DatePicker fx:id="womanDOBDatePicker" layoutX="181.0" layoutY="174.0" prefHeight="25.0" prefWidth="130.0" />
+            <DatePicker fx:id="partnerDOBDatePicker" layoutX="185.0" layoutY="382.0" prefHeight="25.0" prefWidth="130.0" />
+            <ImageView fx:id="clipartLabel" fitHeight="234.0" fitWidth="286.0" layoutX="878.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="55.0" />
+            </children>
+        </AnchorPane>
+   </center>
+</BorderPane>

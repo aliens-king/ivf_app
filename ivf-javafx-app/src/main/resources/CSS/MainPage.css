@@ -1,0 +1,376 @@
+/*.root{*/
+    /*-fx-pref-height: 850px;*/
+    /*-fx-pref-width: 1511px;*/
+/*}*/
+
+.titleText {
+	-fx-text-fill: White;
+	-fx-font-size: 22pt;
+    -fx-font-family: "Open Sans";
+}
+
+.titleDescription{
+	-fx-text-fill: #FFFF99;
+	-fx-font-size: 16pt;
+    -fx-font-family: "Open Sans";
+}
+.titleImage {
+
+	/*-fx-effect: dropshadow(gaussian , rgba(255,255,255,1.0), 12, 0, 0, 0);
+
+	-fx-padding: 5;
+	-fx-background-color: White;
+	-fx-background-radius: 4;*/
+}
+
+#directory {
+    -fx-background-image: url("/icons/back_btn.png");
+    -fx-background-color:  #3498db;
+    -fx-background-radius: 20;
+    -fx-background-insets: 0,2,2,2,0;
+    -fx-padding: 9 9 9 9;
+}
+#directory:hover:pressed{
+    -fx-background-image: url("/icons/back_btn_blue.png");
+    -fx-background-color:  #ffffff;
+}
+
+#directory:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}
+
+#logOut {
+    -fx-background-image: url("/icons/logout_btn.png");
+    -fx-background-color: #3498db;
+}
+
+
+#exit {
+    -fx-background-image: url("/icons/exit_btn.png");
+    -fx-background-color: #3498db;
+}
+
+#minimize {
+    -fx-background-image: url("/icons/minimize.png");
+    -fx-background-color:  #3498db;
+}
+
+
+#maximize {
+    -fx-background-image: url("/icons/maximize.png");
+    -fx-background-color:  #3498db;
+
+}
+
+#searchPatients {
+    -fx-background-image: url("/icons/search_patient.png");
+    -fx-background-color: #06aad9;
+}
+#searchPatients:selected{
+    -fx-background-image: url("/icons/search_patient_hover.png");
+    -fx-background-color: #2980b9;
+}
+
+#addPatients {
+    -fx-background-image: url("/icons/add_patients.png");
+    -fx-background-color: #06aad9;
+}
+#addPatients:selected{
+    -fx-background-image: url("/icons/add_patients_hover.png");
+    -fx-background-color: #2980b9;
+}
+
+#printPatients {
+    -fx-background-image: url("/icons/print_patients.png");
+    -fx-background-color: #06aad9;
+}
+#printPatients:selected{
+    -fx-background-image: url("/icons/print_patients_hover.png");
+    -fx-background-color: #2980b9;
+}
+
+#accountDetails {
+    -fx-background-image: url("/icons/account_details.png");
+    -fx-background-color: #06aad9;
+}
+#accountDetails:selected{
+    -fx-background-image: url("/icons/account_details_hover.png");
+    -fx-background-color: #2980b9;
+}
+
+#addUsers {
+    -fx-background-image: url("/icons/new_accounts.png");
+    -fx-background-color: #06aad9;
+}
+#addUsers:selected{
+    -fx-background-image: url("/icons/new_accounts_hover.png");
+    -fx-background-color: #2980b9;
+}
+
+#markAll {
+    -fx-background-color: #1BBC9B;
+}
+#markAll:hover:pressed{
+    -fx-background-color: #169C82;
+}
+
+
+#markAll:hover{
+    -fx-background-color: linear-gradient(#1BBC9B, #1DCBA8);
+}
+
+#unmarkAll {
+    -fx-background-color: #1BBC9B;
+}
+#unmarkAll:hover:pressed{
+    -fx-background-color: #169C82;
+}
+#unmarkAll:hover{
+    -fx-background-color: linear-gradient(#1BBC9B, #1DCBA8);
+}
+
+
+
+#deleteSelected {
+    -fx-background-color: #B73630;
+}
+#deleteSelected:hover:pressed{
+    -fx-background-color: #932C26;
+}
+#deleteSelected:hover{
+    -fx-background-color: linear-gradient(#B73630, #CE4D46);
+}
+
+#saveAccount {
+    -fx-background-color: #3ABDFF;
+}
+#saveAccount:hover:pressed{
+    -fx-background-color: #004A6F;
+}
+#saveAccount:hover{
+    -fx-background-color: linear-gradient(#3ABDFF,  #71D0FF);
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-alignment: CENTER-LEFT;
+    -fx-font-family: "Open Sans";
+}
+
+.combo-box {
+    -fx-background-color: #ffffff;
+}
+
+.combo-box .arrow{
+    -fx-background-color: #ffffff;
+}
+
+.combo-box .arrow-button{
+    -fx-background-color: #3ABDFF;
+}
+
+.table-view .column-header {
+    -fx-background-color: #3CBAFF;
+    -fx-background-insets: 0.0, 0.0 0.0 0.0 0.0;
+    -fx-border-insets: 0;
+    -fx-border-width: 1px;
+    -fx-border-color: white;
+    -fx-border-width: 0 1 0 0;
+    -fx-size: 20px;
+}
+
+.table-view-cell:empty             { -fx-background-color: cornsilk;    }
+.table-view-cell:empty .table-cell { -fx-border-width:     0px;         }
+
+#markedColumn {
+    -fx-alignment: CENTER;
+}
+
+#printToggleButton{
+    -fx-background-color: #2ECC71;
+    -fx-border: 3px;
+    -fx-border-color: #2ECC71;
+    -fx-height: 45;
+
+}
+
+#printToggleButton:selected {
+    -fx-background-color: #1af700;
+    -fx-border: 3px;
+    -fx-border-color: #1AE000;
+    -fx-height: 45;
+
+}
+
+#printToggleButtonblue{
+    -fx-background-color: #06AAD9;
+    -fx-border: 3px;
+    -fx-border-color:#06AAD9;
+    -fx-height: 45;
+
+}
+
+
+#printToggleButtonblue:selected{
+    -fx-background-color: #00d0fd;
+    -fx-border: 3px;
+    -fx-border-color:#00C3EF;
+    -fx-height: 45;
+
+}
+
+
+/*.table-view .column-header{*/
+    /*-fx-background-color: #3CBAFF;*/
+    /*-fx-text-fill: white;*/
+
+
+    /**/
+    /*-fx-border-insets: 0 2 2 0, 0 0 0 0;*/
+    /*-fx-border-width: 0.083333em, 0.083333em;*/
+/*}*/
+
+#embryo {
+    -fx-background-image: url("/icons/embryology.png");
+    -fx-background-color: #06aad9;
+}
+#embryo:selected{
+    -fx-background-image: url("/icons/embryology_hover.png");
+    -fx-background-color: #2980b9;
+}
+
+#stInvestion{
+	-fx-background-image: url("/icons/standard_investigation.png");
+    -fx-background-color: #06aad9;
+}
+#stInvestion:selected{
+    -fx-background-image: url("/icons/standard_investigation_hover.png");
+    -fx-background-color: #2980b9;
+}
+
+#cryopreservationEmbry{
+	-fx-background-image: url("/icons/cryopreservation_embyro.png");
+    -fx-background-color: #06aad9;
+}
+#cryopreservationEmbry:selected{
+    -fx-background-image: url("/icons/cryopreservation_embyro_hover.png");
+    -fx-background-color: #2980b9;
+}
+
+#cryopreservationSemen{
+	-fx-background-image: url("/icons/cryopreservation_embyro.png");
+    -fx-background-color: #06aad9;
+}
+#cryopreservationSemen:selected{
+    -fx-background-image: url("/icons/cryopreservation_embyro_hover.png");
+    -fx-background-color: #2980b9;
+}
+#andrologySemen{
+	-fx-background-image: url("/icons/andrology.png");
+    -fx-background-color: #06aad9;
+}
+#andrologySemen:selected{
+    -fx-background-image: url("/icons/andrology_hover.png");
+    -fx-background-color: #2980b9;
+ }
+
+ #nurseStation{
+ 	-fx-background-image: url("/icons/nurse_station.png");
+    -fx-background-color: #06aad9;
+ }
+ #nurseStation:selected{
+    -fx-background-image: url("/icons/nurse_station_hover.png");
+    -fx-background-color: #2980b9;
+ }
+  #testAction{
+ 	-fx-background-image: url("/icons/embryology_mismatch.png");
+    -fx-background-color: #06aad9;
+ }
+ #testAction:selected{
+    -fx-background-image: url("/icons/embryology_mismatch_hover.png");
+    -fx-background-color: #2980b9;
+ }
+ #doctorOffice{
+ 	-fx-background-image: url("/icons/doctor_office.png");
+    -fx-background-color: #06aad9;
+ }
+ #doctorOffice:selected{
+    -fx-background-image: url("/icons/doctor_office_hover.png");
+    -fx-background-color: #2980b9;
+ }
+ #etTable{
+ 	-fx-background-image: url("/icons/et.png");
+    -fx-background-color: #06aad9;
+ }
+ #etTable:selected{
+    -fx-background-image: url("/icons/et_hover.png");
+    -fx-background-color: #2980b9;
+ }
+ #appointment{
+ 	-fx-background-image: url("/icons/appointment.png");
+    -fx-background-color: #06aad9;
+}
+#appointment:selected{
+    -fx-background-image: url("/icons/appointment_hover.png");
+    -fx-background-color: #2980b9;
+}
+#cycles{
+ 	-fx-background-image: url("/icons/cycles.png");
+    -fx-background-color: #06aad9;
+}
+#cycles:selected{
+    -fx-background-image: url("/icons/cycles_hover.png");
+    -fx-background-color: #2980b9;
+}
+#companyDetails{
+ 	-fx-background-image: url("/icons/company.png");
+    -fx-background-color: #06aad9;
+}
+#companyDetails:selected{
+    -fx-background-image: url("/icons/company-hover.png");
+    -fx-background-color: #2980b9;
+}
+#myArchive{
+ 	-fx-background-image: url("/icons/archieve.png");
+    -fx-background-color: #06aad9;
+}
+#myArchive:selected{
+    -fx-background-image: url("/icons/archieve-hover.png");
+    -fx-background-color: #2980b9;
+}
+#pregnanyOutcomes{
+ 	-fx-background-image: url("/icons/pregnancy.png");
+    -fx-background-color: #06aad9;
+}
+#pregnanyOutcomes:selected{
+    -fx-background-image: url("/icons/pregnancy-hover.png");
+    -fx-background-color: #2980b9;
+}
+
+#billingAndInvoice{
+ 	-fx-background-image: url("/icons/billing_and_invoice.png");
+    -fx-background-color: #06aad9;
+}
+#billingAndInvoice:selected{
+    -fx-background-image: url("/icons/billing_and_invoice_hover.png");
+    -fx-background-color: #2980b9;
+}
+#unpaidBill{
+ 	-fx-background-image: url("/icons/unpaid_bill.png");
+    -fx-background-color: #06aad9;
+}
+#unpaidBill:selected{
+    -fx-background-image: url("/icons/unpaid_bill_hover.png");
+    -fx-background-color: #2980b9;
+}
+#refundBillOverall{
+ 	-fx-background-image: url("/icons/refund_overall.png");
+    -fx-background-color: #06aad9;
+}
+#refundBillOverall:selected{
+    -fx-background-image: url("/icons/refund_overall_hover.png");
+    -fx-background-color: #2980b9;
+}
+
+
+

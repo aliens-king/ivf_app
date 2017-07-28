@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane stylesheets="@../CSS/mvid.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.UnpaidBillOverallController">
+   <styleClass>
+      <String fx:value="root" />
+      <String fx:value="layout-resolution-includes" />
+   </styleClass>
+   <children>
+      <Text fill="WHITE" layoutX="48.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="companyLabel" text="%unpaid.bill.overall.header" wrappingWidth="450.125">
+         <font>
+            <Font name="Open Sans" size="24.0" />
+         </font>
+      </Text>
+      <GridPane layoutX="60.0" layoutY="115.0" prefHeight="550.0" prefWidth="1315.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" percentHeight="100.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TableView fx:id="unpaidBillOverallTableView" prefHeight="200.0" prefWidth="1315.0">
+              <columns>
+                <TableColumn fx:id="srNoColumn" prefWidth="100.0" text="%common.label.sr.no" />
+                <TableColumn fx:id="invoiceHyperlink" prefWidth="165.0" text="%payment.detail.controller.invoice.label" />
+                  <TableColumn fx:id="totalBillColumn" prefWidth="165.0" text="%add.payment.total.bill" />
+                  <TableColumn fx:id="totalPaidColumn" prefWidth="165.0" text="%add.payment.total.paid" />
+                  <TableColumn fx:id="totalBalanceColumn" prefWidth="165.0" text="%add.payment.total.balance" />
+                  <TableColumn fx:id="billedByColumn" prefWidth="150.0" text="%payment.controller.billed.text" />
+                  <TableColumn fx:id="invoiceDateColumn" prefWidth="110.0" text="%payment.detail.controller.date.label" />
+                  <TableColumn fx:id="coupleDetailColumn" prefWidth="275.0" text="%tablepane.tablecolumn.couple" />
+              </columns>
+            </TableView>
+         </children>
+      </GridPane>
+      <Button layoutX="1225.0" layoutY="735.0" mnemonicParsing="false" onAction="#printAction" styleClass="custom-common-button" text="%common.button.print" />
+      <fx:include source="CommonFooter.fxml" />
+      <HBox layoutX="280.0" layoutY="682.0" prefHeight="41.0" prefWidth="752.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="245.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" text="%add.payment.total.bill">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin></Label>
+                  <TextField fx:id="totalBill" prefHeight="30.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="245.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" text="%add.payment.total.paid">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin></Label>
+                  <TextField fx:id="totalPaid" prefHeight="30.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="245.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" text="%add.payment.total.balance">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin></Label>
+                  <TextField fx:id="totalBalance" prefHeight="30.0" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <GridPane layoutX="850.0" layoutY="70.0" prefHeight="30.0" prefWidth="520.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="20.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="2.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="20.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="38.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="%unpaid.bill.generate.excel.date.from" GridPane.halignment="RIGHT">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin></Label>
+            <Label text="%unpaid.bill.generate.excel.date.to" GridPane.columnIndex="3" GridPane.halignment="RIGHT">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin></Label>
+            <DatePicker fx:id="fromDate" prefHeight="30.0" GridPane.columnIndex="1" />
+            <DatePicker fx:id="toDate" prefHeight="30.0" GridPane.columnIndex="4" />
+            <Button mnemonicParsing="false" onAction="#generateExcelPdfFileAction" styleClass="custom-common-button" text="%unpaid.bill.generate.excel.pdf" GridPane.columnIndex="5" GridPane.halignment="RIGHT" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

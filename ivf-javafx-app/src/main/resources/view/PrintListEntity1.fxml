@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="350.0" prefHeight="77.0" prefWidth="1386.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.RecentArchiveEntityController">
+    <children>
+        <Button fx:id="button" layoutX="241.0" layoutY="9.0" maxHeight="82.0" maxWidth="149.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="39.0" prefWidth="95.0" AnchorPane.leftAnchor="241.0" />
+      <Text fx:id="numberText" layoutX="44.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="08:00" />
+      <CheckBox fx:id="mainCheckBox" layoutX="16.0" layoutY="23.0" mnemonicParsing="false" onAction="#checkBoxAction" prefHeight="21.0" prefWidth="12.0" />
+      <Label id="codeLabel" fx:id="firstCharacter" alignment="CENTER" contentDisplay="CENTER" layoutX="941.0" layoutY="16.0" prefHeight="38.0" prefWidth="100.0" style="-fx-background-color: #3498DB;" text="A" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label id="codeLabel" fx:id="secondCharacter" alignment="CENTER" layoutX="1044.0" layoutY="16.0" prefHeight="57.0" prefWidth="100.0" style="-fx-background-color: #3498DB;" text="A" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label id="codeLabel" fx:id="thirdCharacter" alignment="CENTER" layoutX="1147.0" layoutY="16.0" prefHeight="58.0" prefWidth="100.0" style="-fx-background-color: #3498DB;" text="A" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label fx:id="womanSurname" alignment="CENTER" layoutX="623.0" layoutY="16.0" maxHeight="21.0" maxWidth="153.0" minHeight="21.0" minWidth="153.0" prefHeight="21.0" prefWidth="153.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="womanFirstName" alignment="CENTER" layoutX="623.0" layoutY="34.0" maxHeight="21.0" maxWidth="153.0" minHeight="21.0" minWidth="153.0" prefHeight="21.0" prefWidth="153.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="partnerSurname" alignment="CENTER" layoutX="787.0" layoutY="18.0" maxHeight="21.0" maxWidth="153.0" minHeight="21.0" minWidth="153.0" prefHeight="21.0" prefWidth="153.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="partnerFirstName" alignment="CENTER" layoutX="787.0" layoutY="34.0" maxHeight="21.0" maxWidth="153.0" minHeight="21.0" minWidth="153.0" prefHeight="21.0" prefWidth="153.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="button1" layoutX="1264.0" layoutY="16.0" maxHeight="78.0" maxWidth="125.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="42.0" prefWidth="100.0" />
+      <CheckBox id="checkBox" fx:id="allCheckBox" layoutX="92.0" layoutY="16.0" mnemonicParsing="false" onAction="#allAction" prefHeight="21.0" prefWidth="102.0" style="-fx-background-color: #3498DB;" text="ALL" textFill="WHITE">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox id="checkBox" fx:id="fileCheckBox" layoutX="92.0" layoutY="39.0" mnemonicParsing="false" onAction="#fileCheckBoxAction" prefHeight="21.0" prefWidth="102.0" style="-fx-background-color: #3498DB;" text="File" textFill="WHITE">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </CheckBox>
+      <Spinner fx:id="spinner" layoutX="511.0" layoutY="16.0" prefHeight="58.0" prefWidth="95.0" />
+      <CheckBox id="checkBox" fx:id="straweCheckBox" layoutX="296.0" layoutY="36.0" mnemonicParsing="false" onAction="#strawECheckBoxAction" prefHeight="21.0" prefWidth="102.0" style="-fx-background-color: #3498DB;" text="Straw-E" textFill="WHITE">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox id="checkBox" fx:id="biopsyCheckBox" layoutX="194.0" layoutY="16.0" mnemonicParsing="false" onAction="#biopsyCheckBoxAction" prefHeight="21.0" prefWidth="102.0" style="-fx-background-color: #3498DB;" text="Biopsy" textFill="WHITE">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox id="checkBox" fx:id="strawsCheckBox" layoutX="296.0" layoutY="15.0" mnemonicParsing="false" onAction="#strawsCheckBoxAction" prefHeight="21.0" prefWidth="102.0" style="-fx-background-color: #3498DB;" text="Straw-S" textFill="WHITE">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox id="checkBox" fx:id="iuiCheckBox" layoutX="194.0" layoutY="39.0" mnemonicParsing="false" onAction="#iuiCheckBoxAction" prefHeight="21.0" prefWidth="102.0" style="-fx-background-color: #3498DB;" text="IUI" textFill="WHITE">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox id="checkBox" fx:id="bmCheckBox" layoutX="398.0" layoutY="15.0" mnemonicParsing="false" onAction="#bmCheckBoxAction" prefHeight="21.0" prefWidth="102.0" style="-fx-background-color: #3498DB;" text="BM" textFill="WHITE">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox id="checkBox" fx:id="semenPotCheckBox" layoutX="398.0" layoutY="43.0" mnemonicParsing="false" onAction="#semenPotCheckBoxAction" prefHeight="21.0" prefWidth="102.0" style="-fx-background-color: #3498DB;" text="Semen Pot" textFill="WHITE">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </CheckBox>
+    </children>
+</AnchorPane>

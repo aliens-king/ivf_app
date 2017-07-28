@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="2000.0" maxWidth="2000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="1482.0" stylesheets="@../CSS/CommonDetails.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.CommonDetailController">
+   <children>
+      <Label layoutX="37.0" layoutY="17.0" text="%commondetail.label.womaninfo.title" AnchorPane.topAnchor="17.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <styleClass>
+            <String fx:value="header" />
+            <String fx:value="textColor" />
+         </styleClass></Label>
+      <Label layoutX="606.0" layoutY="17.0" text="%commondetail.label.partnerinfo.title" AnchorPane.topAnchor="17.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <styleClass>
+            <String fx:value="header" />
+            <String fx:value="textColor" />
+         </styleClass></Label>
+      <ImageView fx:id="imageView" fitHeight="212.0" fitWidth="251.0" layoutX="1204.0" layoutY="56.0" AnchorPane.leftAnchor="1204.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="56.0">
+         <image>
+            <Image url="@../../../../../images/temp/1.jpg" />
+         </image></ImageView>
+      <!-- <Label layoutX="56.0" layoutY="69.0" text="Surname*"  AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="70.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="womanSurnameTextField" layoutX="10.0" layoutY="72.0" prefHeight="30.0" prefWidth="350.0" AnchorPane.leftAnchor="189.0" AnchorPane.topAnchor="70.0" />
+      <Label layoutX="40.0" layoutY="123.0" text="First Name*"  AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="120.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="womanFirstNameTextField" layoutX="168.0" layoutY="127.0" prefHeight="30.0" prefWidth="350.0" AnchorPane.leftAnchor="189.0" AnchorPane.topAnchor="120.0" />
+      <Label layoutX="23.0" layoutY="158.0" text="Middel Name"  AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="170.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="womanMiddleNameTextField" layoutX="134.0" layoutY="175.0" prefHeight="30.0" prefWidth="350.0" AnchorPane.leftAnchor="189.0" AnchorPane.topAnchor="170.0" />
+      <Label layoutX="26.0" layoutY="211.0" text="Date of birth*"  AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="220.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="506.0" layoutY="76.0" text="Surname*"  AnchorPane.leftAnchor="600.0" AnchorPane.topAnchor="70.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="partnerSurnameTextField" layoutX="640.0" layoutY="70.0" prefHeight="30.0" prefWidth="350.0" AnchorPane.leftAnchor="730.0" AnchorPane.topAnchor="70.0" />
+      <Label layoutX="477.0" layoutY="127.0" text="First Name*"  AnchorPane.leftAnchor="600.0" AnchorPane.topAnchor="120.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="483.0" layoutY="169.0" text="Middel Name"  AnchorPane.leftAnchor="600.0" AnchorPane.topAnchor="170.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="partnerFirstNameTextField" layoutX="640.0" layoutY="120.0" prefHeight="30.0" prefWidth="350.0" AnchorPane.leftAnchor="730.0" AnchorPane.topAnchor="120.0" />
+      <TextField fx:id="partnerMiddleNameTextField" layoutX="640.0" layoutY="170.0" prefHeight="30.0" prefWidth="350.0" AnchorPane.leftAnchor="730.0" AnchorPane.topAnchor="170.0" />
+      <Label layoutX="504.0" layoutY="210.0" text="Date of birth*"  AnchorPane.leftAnchor="600.0" AnchorPane.topAnchor="220.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="499.0" layoutY="243.0" text="Gender"  AnchorPane.leftAnchor="600.0" AnchorPane.topAnchor="270.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="619.0" layoutY="242.0" prefHeight="26.0" prefWidth="83.0" AnchorPane.leftAnchor="730.0" AnchorPane.topAnchor="270.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="190.0" layoutY="308.0" prefHeight="28.0" prefWidth="100.0" style="-fx-background-color: #06aad9;" text="Code"  AnchorPane.leftAnchor="189.0" AnchorPane.topAnchor="308.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField layoutX="328.0" layoutY="306.0" prefHeight="26.0" prefWidth="131.0" AnchorPane.topAnchor="308.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="704.0" layoutY="308.0" prefHeight="28.0" prefWidth="100.0" style="-fx-background-color: #06aad9;" text="Code"  AnchorPane.leftAnchor="730.0" AnchorPane.topAnchor="308.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField layoutX="861.0" layoutY="309.0" prefHeight="26.0" prefWidth="131.0" AnchorPane.topAnchor="308.0" />
+      <DatePicker layoutX="189.0" layoutY="209.0" AnchorPane.leftAnchor="189.0" AnchorPane.topAnchor="220.0" />
+      <DatePicker layoutX="640.0" layoutY="220.0" AnchorPane.leftAnchor="730.0" AnchorPane.topAnchor="220.0" /> -->
+
+        <GridPane layoutX="54.0" layoutY="51.0" prefHeight="119.0" prefWidth="1054.0" AnchorPane.topAnchor="51.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="157.0" minWidth="10.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="331.0" minWidth="10.0" prefWidth="331.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="221.0" minWidth="6.0" prefWidth="91.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="151.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="330.0" minWidth="0.0" prefWidth="330.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+           <!-- <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />-->
+        </rowConstraints>
+         <children>
+            <Label styleClass="textColor" text="%commondetail.label.surname.required" />
+            <Label prefHeight="21.0" prefWidth="108.0" styleClass="textColor" text="%commondetail.label.firstname.requird" GridPane.rowIndex="1" />
+            <Label styleClass="textColor" text="%commondetail.label.middlename" GridPane.rowIndex="2" />
+           <!-- <Label text="Home Address"  GridPane.rowIndex="3" />
+            <Label text="Phone number*"  GridPane.rowIndex="5" />
+            <Label text="Email*"  GridPane.rowIndex="4" />-->
+            <TextField fx:id="womanSurnameTextField" prefHeight="25.0" prefWidth="300.0" GridPane.columnIndex="1">
+               <font>
+                  <Font size="13.0" />
+               </font></TextField>
+            <TextField fx:id="womanFirstNameTextField" prefHeight="25.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="13.0" />
+               </font></TextField>
+            <TextField fx:id="womanMiddleNameTextField" prefHeight="25.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="13.0" />
+               </font></TextField>
+          <!--  <TextField fx:id="womanHomeAddressTextField" prefHeight="30.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="womanPhoneNumberTextField" prefHeight="30.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="womanEmailTextField" prefHeight="30.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />-->
+            <TextField fx:id="partnerSurnameTextField" prefHeight="25.0" prefWidth="300.0" GridPane.columnIndex="4">
+               <font>
+                  <Font size="13.0" />
+               </font></TextField>
+            <TextField fx:id="partnerFirstNameTextField" prefHeight="25.0" prefWidth="300.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <font>
+                  <Font size="13.0" />
+               </font></TextField>
+            <TextField fx:id="partnerMiddleNameTextField" prefHeight="25.0" prefWidth="300.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <font>
+                  <Font size="13.0" />
+               </font></TextField>
+           <!-- <TextField fx:id="partnerEmailTextField" prefHeight="30.0" prefWidth="300.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <TextField fx:id="partnerHomeAddressTextField" prefHeight="30.0" prefWidth="300.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <TextField fx:id="partnerPhoneNumberTextField" prefHeight="30.0" prefWidth="300.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />-->
+            <Label styleClass="textColor" text="%commondetail.label.surname.required" GridPane.columnIndex="3" GridPane.halignment="LEFT" />
+            <Label styleClass="textColor" text="%commondetail.label.firstname.requird" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+            <Label styleClass="textColor" text="%commondetail.label.middlename" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+          <!--  <Label text="Home Address"  GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
+            <Label text="Email*"  GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="4" />
+            <Label text="Phone number*"  GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="5" />
+            <Label prefHeight="21.0" prefWidth="124.0" text="Date of birth*"  GridPane.rowIndex="6" />
+            <DatePicker fx:id="womanDOBDatePicker" prefHeight="26.0" prefWidth="120.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="Date of birth*"  GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <DatePicker fx:id="partnerDOBDatePicker" prefHeight="26.0" prefWidth="120.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />-->
+         </children>
+      </GridPane>
+      <Label layoutX="56.0" layoutY="179.0" prefHeight="21.0" prefWidth="56.0" styleClass="textColor" text="%commondetail.label.code" />
+      <TextField fx:id="womanCodeTextfield" editable="false" layoutX="206.0" layoutY="176.0">
+         <font>
+            <Font size="13.0" />
+         </font></TextField>
+      <Label layoutX="631.0" layoutY="179.0" prefHeight="21.0" prefWidth="56.0" styleClass="textColor" text="%commondetail.label.code" />
+      <TextField fx:id="partnerCodeTextfield" editable="false" layoutX="779.0" layoutY="176.0">
+         <font>
+            <Font size="13.0" />
+         </font></TextField>
+
+   </children>
+</AnchorPane>

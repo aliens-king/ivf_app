@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="loginBorderPane" prefHeight="985.0" prefWidth="1611.0" style="-fx-background-color: #06AAD9;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.LoginController">
+    <bottom>
+        <Label id="loginCopyrightLabel" prefHeight="35.0" style="-fx-background-color: #06AAD9;" text="%footer.label.copywrite.message" textFill="WHITE" BorderPane.alignment="BOTTOM_LEFT">
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+         <padding>
+            <Insets bottom="14.0" left="14.0" />
+         </padding>
+        </Label>
+    </bottom>
+    <center>
+        <AnchorPane fx:id="centerAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1547.0" style="-fx-background-color: #06AAD9;">
+            <children>
+                <Text fill="WHITE" layoutX="578.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%loginpage.text.message" textAlignment="CENTER" wrappingWidth="390.3603515625">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+                <PasswordField fx:id="passwordTextField" layoutX="672.0" layoutY="328.0" onAction="#passwordTextField" prefHeight="52.0" prefWidth="254.0" />
+                <Button fx:id="enterButton" layoutX="741.0" layoutY="408.0" mnemonicParsing="false" onAction="#enterButtonAction" prefHeight="64.0" prefWidth="64.0" stylesheets="@../CSS/Login.css" BorderPane.alignment="CENTER" />
+                <ImageView fitHeight="64.0" fitWidth="52.0" layoutX="620.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../icons/lock.png" />
+                    </image>
+                </ImageView>
+            <ImageView fx:id="companyLogoImageView" fitHeight="150.0" fitWidth="200.0" layoutX="1320.0" layoutY="618.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-38.0" AnchorPane.rightAnchor="27.0" />
+            <Label fx:id="companyNameLabel" alignment="CENTER_RIGHT" layoutX="784.0" layoutY="776.0" prefHeight="32.0" prefWidth="735.0" textFill="WHITE" AnchorPane.bottomAnchor="-78.0" AnchorPane.rightAnchor="28.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </center>
+   <top>
+      <AnchorPane prefWidth="717.0" style="-fx-background-color: #06AAD9;" BorderPane.alignment="CENTER">
+         <children>
+                <ImageView fitHeight="47.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="40.0">
+                    <image>
+                        <Image url="@../icons/login_screen_icon.png" />
+                    </image>
+                </ImageView>
+                <Text fill="WHITE" layoutX="105.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%loginpage.text.login" AnchorPane.leftAnchor="105.0" AnchorPane.topAnchor="47.1015625">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </AnchorPane>
+   </top>
+</BorderPane>

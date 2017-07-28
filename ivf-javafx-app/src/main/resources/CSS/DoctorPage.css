@@ -1,0 +1,36 @@
+.body{
+	-fx-background-color: #2980B9;
+}
+
+
+.text {
+	-fx-font-size: 14px;
+	-fx-text-fill: #FFFFFF;
+}
+
+.headercolor {
+
+	-fx-background-color:#06aad9;
+	-fx-text-fill: #FFFFFF;
+}
+.buttonLabel
+{
+   -fx-background-color:#06aad9;
+
+}
+
+.grid .text{
+
+	-fx-background-color:#929292;
+	-fx-font-size: 18px;
+
+}
+
+.interfaceClass {
+	-fx-background-color: #06aad9;
+	-fx-text-fill: White;
+	-fx-font-family: "Open Sans";
+
+}
+
+

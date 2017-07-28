@@ -1,0 +1,37 @@
+.body{
+	-fx-background-color: #2980B9;
+}
+
+.layout-resolution-includes{
+	-fx-pref-width : 1435;
+	-fx-pref-height : 687;
+
+}
+
+.text {
+	-fx-font-size: 14px;
+	-fx-text-fill: #FFFFFF;
+	-fx-font-family: "Open Sans";
+}
+.button {
+	/*-fx-font-size: 15px;*/
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Open Sans";
+    -fx-background-color: #3CBAFF;
+}
+
+.label-text{
+   -fx-background-color:  #06AAD9;
+   -fx-text-fill: White;
+   -fx-font-size: 18px;
+   -fx-font-weight: normal
+}
+
+.registrant-gridpane {
+    -fx-border-color : #000000;
+ 	-fx-pref-width : 250px;
+	-fx-pref-height : 115px;
+	-fx-max-width : 250px;
+	-fx-max-height : 115px;	
+	-fx-padding: 3;
+}

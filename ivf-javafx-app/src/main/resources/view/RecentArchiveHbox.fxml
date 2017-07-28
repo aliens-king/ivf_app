@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="62.0" prefWidth="290.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.RecentArchiveHboxController">
+    <children>
+        <Text fx:id="date" layoutX="22.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%recentarchievehbox.text.date" AnchorPane.leftAnchor="22.0">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Text>
+      <HBox fx:id="hbox" layoutX="289.0" layoutY="2.0" prefHeight="100.0" />
+    </children>
+</AnchorPane>

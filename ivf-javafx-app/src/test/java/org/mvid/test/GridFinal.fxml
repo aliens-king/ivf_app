@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mvid.test.CryoEmbroController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TableView fx:id="embryoTable" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="cycle" prefWidth="75.0" text="Cycle" />
+          <TableColumn fx:id="srNo" prefWidth="109.0" text="Sr No" />
+            <TableColumn fx:id="quality" prefWidth="94.0" text="Quality" />
+            <TableColumn fx:id="dateOfUse" prefWidth="127.0" text="Date Of Use" />
+            <TableColumn fx:id="type" prefWidth="111.0" text="Type" />
+        </columns>
+      </TableView>
+   </children>
+</GridPane>

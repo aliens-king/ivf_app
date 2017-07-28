@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="1216.0" prefHeight="48.0" prefWidth="1363.0" style="-fx-background-color: #ffffff; -fx-border-insets: 2 0 0 0;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.PatientListEntityController">
+    <children>
+        <Text fx:id="numberText" layoutX="34.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%printlist_entity.text.time" AnchorPane.leftAnchor="34.0" />
+        <CheckBox fx:id="mainCheckBox" layoutX="6.0" layoutY="13.0" mnemonicParsing="false" onAction="#checkBoxAction" prefHeight="21.0" prefWidth="12.0" AnchorPane.leftAnchor="6.0" />
+        <Label id="codeLabel" fx:id="codeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="931.0" layoutY="6.0" prefHeight="42.0" prefWidth="320.0" style="-fx-background-color: #3498DB;" text="%printlist_entity.label.a" textFill="WHITE" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="112.0" AnchorPane.topAnchor="3.0">
+            <font>
+                <Font name="System Bold" size="29.0" />
+            </font>
+        </Label>
+        <Label fx:id="womanSurname" alignment="CENTER" layoutX="613.0" layoutY="6.0" maxHeight="21.0" maxWidth="153.0" minHeight="21.0" minWidth="153.0" prefHeight="21.0" prefWidth="153.0" text="%printlist_entity.label.text" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="613.0" AnchorPane.rightAnchor="597.0" AnchorPane.topAnchor="3.0">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="womanFirstName" alignment="CENTER" layoutX="613.0" layoutY="24.0" maxHeight="21.0" maxWidth="153.0" minHeight="21.0" minWidth="153.0" prefHeight="21.0" prefWidth="153.0" text="%printlist_entity.label.corde" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="613.0" AnchorPane.rightAnchor="597.0" AnchorPane.topAnchor="24.0">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="partnerSurname" alignment="CENTER" layoutX="777.0" layoutY="8.0" maxHeight="21.0" maxWidth="153.0" minHeight="21.0" minWidth="153.0" prefHeight="21.0" prefWidth="153.0" text="%printlist_entity.label.ioana" AnchorPane.bottomAnchor="24.0" AnchorPane.rightAnchor="433.0" AnchorPane.topAnchor="3.0">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="partnerFirstName" alignment="CENTER" layoutX="777.0" layoutY="24.0" maxHeight="21.0" maxWidth="153.0" minHeight="21.0" minWidth="153.0" prefHeight="21.0" prefWidth="153.0" text="%printlist_entity.label.baciu" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="433.0" AnchorPane.topAnchor="24.0">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <Button fx:id="button" layoutX="1254.0" layoutY="6.0" maxHeight="78.0" maxWidth="125.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="42.0" prefWidth="100.0" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="3.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+        <CheckBox id="checkBox" fx:id="allCheckBox" layoutX="82.0" layoutY="6.0" mnemonicParsing="false" onAction="#allAction" prefHeight="21.0" prefWidth="102.0" style="-fx-background-color: #3498DB;" text="%printlist_entity.chkbox.all" textFill="WHITE" AnchorPane.leftAnchor="82.0" AnchorPane.topAnchor="3.0">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </CheckBox>
+        <CheckBox id="checkBox" fx:id="fileCheckBox" layoutX="82.0" layoutY="29.0" mnemonicParsing="false" onAction="#fileCheckBoxAction" prefHeight="21.0" prefWidth="102.0" style="-fx-background-color: #3498DB;" text="%patient.chkbox.file" textFill="WHITE" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="82.0">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </CheckBox>
+        <Spinner fx:id="spinner" editable="true" layoutX="501.0" layoutY="6.0" prefHeight="58.0" prefWidth="95.0" AnchorPane.bottomAnchor="3.0" AnchorPane.topAnchor="3.0" />
+        <CheckBox id="checkBox" fx:id="straweCheckBox" layoutX="286.0" layoutY="26.0" mnemonicParsing="false" onAction="#strawECheckBoxAction" prefHeight="21.0" prefWidth="102.0" style="-fx-background-color: #3498DB;" text="%patient.chkbox.straw.e" textFill="WHITE" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="286.0">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </CheckBox>
+        <CheckBox id="checkBox" fx:id="biopsyCheckBox" layoutX="184.0" layoutY="6.0" mnemonicParsing="false" onAction="#biopsyCheckBoxAction" prefHeight="21.0" prefWidth="102.0" style="-fx-background-color: #3498DB;" text="%patient.chkbox.biopsy" textFill="WHITE" AnchorPane.leftAnchor="184.0" AnchorPane.topAnchor="3.0">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </CheckBox>
+        <CheckBox id="checkBox" fx:id="strawsCheckBox" layoutX="286.0" layoutY="5.0" mnemonicParsing="false" onAction="#strawsCheckBoxAction" prefHeight="21.0" prefWidth="102.0" style="-fx-background-color: #3498DB;" text="%patient.chkbox.straw.s" textFill="WHITE" AnchorPane.leftAnchor="286.0" AnchorPane.topAnchor="3.0">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </CheckBox>
+        <CheckBox id="checkBox" fx:id="iuiCheckBox" layoutX="184.0" layoutY="29.0" mnemonicParsing="false" onAction="#iuiCheckBoxAction" prefHeight="21.0" prefWidth="102.0" style="-fx-background-color: #3498DB;" text="%patient.chkbox.iui" textFill="WHITE" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="184.0">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </CheckBox>
+        <CheckBox id="checkBox" fx:id="bmCheckBox" layoutX="388.0" layoutY="5.0" mnemonicParsing="false" onAction="#bmCheckBoxAction" prefHeight="21.0" prefWidth="102.0" style="-fx-background-color: #3498DB;" text="%patient.chkbox.bm" textFill="WHITE" AnchorPane.leftAnchor="388.0" AnchorPane.topAnchor="3.0">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </CheckBox>
+        <CheckBox id="checkBox" fx:id="semenPotCheckBox" layoutX="388.0" layoutY="33.0" mnemonicParsing="false" onAction="#semenPotCheckBoxAction" prefHeight="21.0" prefWidth="102.0" style="-fx-background-color: #3498DB;" text="%patient.chkbox.semenpot" textFill="WHITE" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="388.0">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </CheckBox>
+    </children>
+</AnchorPane>

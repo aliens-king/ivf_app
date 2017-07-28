@@ -1,0 +1,19 @@
+.popup-screen-header {
+	-fx-background-color: #389FE2;
+	-fx-pref-height : 55.0;
+	
+}
+
+.popup-screen-header-label .label .text{
+	-fx-font-size: 24.0px;
+	-fx-text-fill: white;
+}
+.popup-screen-resolution{
+	-fx-pref-width : 450.0;
+	-fx-pref-height : 450.0;
+}
+
+#popup-close-button {
+    -fx-background-image: url("/icons/exit_btn_popup.png");
+    -fx-background-color:#389FE2;
+}

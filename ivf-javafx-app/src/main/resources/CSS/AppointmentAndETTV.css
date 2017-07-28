@@ -1,0 +1,30 @@
+.layout-resolution-includes{
+	-fx-pref-width : 1435;
+	-fx-pref-height : 687;
+
+}
+.root {
+	-fx-background: #2980b9;
+	-fx-font-family: "Open Sans";
+	
+}
+.table-view .column-header{
+	 -fx-size: 35;
+}
+
+.table-view .column-header .label{
+	-fx-alignment: center;
+}
+
+.text {
+	-fx-font-size: 20px;
+	-fx-text-fill: #FFFFFF;
+	-fx-font-family: "Open Sans";
+}
+
+.button {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Open Sans";
+    -fx-background-color: #3CBAFF;
+}
+

@@ -1,0 +1,80 @@
+.body{
+	-fx-background-color: #2980B9;
+}
+.text {
+	-fx-font-size: 14px;
+	-fx-text-fill: #FFFFFF;
+}
+.headercolor {
+
+	-fx-background-color:#06aad9;
+	-fx-text-fill: #FFFFFF;
+}
+.sementextsize .text{
+	-fx-font-size: 16px;
+	-fx-text-fill: #FFFFFF;
+}
+#rowHeading {
+  -fx-alignment: CENTER_RIGHT;
+}
+
+.interfaceClass{
+	-fx-background-color: #AEA6E4;
+	-fx-text-fill: White;
+	-fx-font-size: 12px;
+	-fx-font-family: "Open Sans";
+}
+
+.GridPaneClass{
+	-fx-background-color :White;
+	-fx-border-width: 1;
+	-fx-border-color: black;
+}
+
+.gridLabel{
+   -fx-font-size: 14px;
+}
+
+.headerLebel {
+	-fx-text-fill: #ffffff;
+	-fx-font-size: 16px;
+}
+.grid .text{
+	-fx-font-size: 14px;
+	-fx-text-fill: #ffffff;
+}
+
+.table-view {
+   /*  -fx-base: #B2868E; */
+    /* -fx-control-inner-background: #1d1d1d; */
+   /*  -fx-background-color: WHITE; */
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    /* -fx-padding: 5;
+    -fx-fixed-cell-size:2px; */
+}
+
+.table-view .column-header .label {
+   -fx-text-fill: White;
+   -fx-font-size: 12px;
+   -fx-font-weight: normal
+}
+
+.table-view .column-header, .table-view .filler {
+	/* -fx-size:20px; */
+	-fx-background-color: #06aad9;
+    -fx-size: 5;
+    -fx-border-width: 0 0 0 0;
+    -fx-border-color:
+        transparent
+        transparent
+        derive(-fx-base, 80%)
+        transparent;
+    -fx-border-insets: 0 0 0 0;
+}
+.grids .text{
+
+	-fx-background-color:#929292;
+	-fx-font-size: 18px;
+
+}

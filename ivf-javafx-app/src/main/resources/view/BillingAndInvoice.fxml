@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane stylesheets="@../CSS/mvid.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.BillingAndInvoiceController">
+   <styleClass>
+      <String fx:value="root" />
+      <String fx:value="layout-resolution-includes" />
+   </styleClass>
+   <children>
+    <fx:include fx:id="commonDetail" source="CommonDetail.fxml" />
+      <GridPane layoutX="60.0" layoutY="280.0" prefHeight="410.0" prefWidth="1310.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="55.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="1.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="20.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="1.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="11.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="1.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="11.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" percentHeight="70.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+               <children>
+                  <HBox spacing="30.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="96.0" text="%payment.detail.controller.invoice.label" />
+                              <TextField fx:id="invoiceNoTextField" prefHeight="30.0" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="100.0" text="%payment.detail.controller.date.label" />
+                              <TextField fx:id="invoiceCreateDate" prefHeight="30.0" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <TableView fx:id="proceduresTableView" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+              <columns>
+                <TableColumn fx:id="sno" prefWidth="135.0" text="%common.label.sr.no" />
+                <TableColumn fx:id="procedureName" prefWidth="290.0" text="%billing.setup.procedure.name" />
+                  <TableColumn fx:id="procedurePrice" prefWidth="288.0" text="%billing.setup.procedure.price" />
+              </columns>
+            </TableView>
+            <Label text="Label" GridPane.rowIndex="1" />
+            <VBox prefWidth="188.0" spacing="18.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <children>
+                  <Button id="markAll" mnemonicParsing="false" onAction="#addProcedureAction" prefHeight="30.0" prefWidth="150.0" text="%billing.invoice.add.procedure">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button id="markAll" mnemonicParsing="false" onAction="#addPaymentAction" prefHeight="30.0" prefWidth="150.0" text="%billing.invoice.add.payment">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button id="new-screen-button" mnemonicParsing="false" onAction="#paymentDetailsAction" prefHeight="30.0" prefWidth="150.0" text="%billing.invoice.payment.details">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button id="new-screen-button" mnemonicParsing="false" onAction="#invoicesAction" prefHeight="30.0" prefWidth="150.0" text="%billing.invoice.all.invoices">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button id="new-screen-button" mnemonicParsing="false" onAction="#refundAndInvoiveAction" prefHeight="30.0" prefWidth="150.0" text="%refund.bill.invoice">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button id="new-screen-button" mnemonicParsing="false" onAction="#unpaidBillAction" prefHeight="30.0" prefWidth="150.0" text="%mainpage.togglebutton.unpaid.bill" />
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <Label alignment="CENTER" prefHeight="62.0" prefWidth="303.0" text="%common.label.remarks">
+                     <styleClass>
+                        <String fx:value="blueLabelClass" />
+                        <String fx:value="custom-common-text-size" />
+                     </styleClass></Label>
+                  <TextArea fx:id="remarksTextArea" prefHeight="330.0" prefWidth="303.0" wrapText="true" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.rowIndex="2">
+               <children>
+                  <HBox spacing="30.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="100.0" text="%billing.invoice.subtotal" />
+                              <TextField fx:id="subTotalTextField" prefHeight="30.0" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label fx:id="vatLabel" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0" text="%billing.invoice.vat">
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding></Label>
+                              <TextField fx:id="vatTextField" prefHeight="30.0" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0" text="%billing.invoice.total">
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding></Label>
+                              <TextField fx:id="totalBillTextField" prefHeight="30.0" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <GridPane.margin>
+                  <Insets top="30.0" />
+               </GridPane.margin>
+            </VBox>
+            <VBox spacing="18.0" GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#editRemarksAction" prefHeight="30.0" prefWidth="150.0" text="%pregnancy.outcomes.edit.button" />
+                  <Button mnemonicParsing="false" onAction="#saveRemarksAction" prefHeight="30.0" prefWidth="150.0" text="%pregnancy.outcomes.save.button" />
+                  <Button mnemonicParsing="false" onAction="#printAction" prefHeight="30.0" prefWidth="150.0" text="%common.button.print" />
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+      <fx:include source="CommonFooter.fxml" />
+   </children>
+</AnchorPane>

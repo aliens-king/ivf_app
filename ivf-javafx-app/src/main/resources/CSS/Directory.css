@@ -1,0 +1,308 @@
+#refundBillOverall {
+    -fx-background-image: url("/directory/refund.png");
+    -fx-background-color: #06aad9;
+    -fx-background-repeat: stretch;
+    -fx-background-size:130.0 120.0;
+    -fx-background-position: center center;
+}
+#refundBillOverall:hover:pressed{
+    -fx-background-color: #045F79;
+}
+#refundBillOverall:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}
+#nurseStation {
+    -fx-background-image: url("/directory/nursestation.png");
+    -fx-background-color: #06aad9;
+    -fx-background-repeat: stretch;
+    -fx-background-size:130.0 120.0;
+    -fx-background-position: center center;
+}
+#nurseStation:hover:pressed{
+    -fx-background-color: #045F79;
+}
+#nurseStation:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}
+
+#standardInvestigation {
+    -fx-background-image: url("/directory/standardinvestigation.png");
+    -fx-background-color: #06aad9;
+    -fx-background-repeat: stretch;
+    -fx-background-size:130.0 120.0;
+    -fx-background-position: center center;
+}
+#standardInvestigation:hover:pressed{
+    -fx-background-color: #045F79;
+}
+
+
+#standardInvestigation:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}
+
+#registerUser {
+    -fx-background-image: url("/directory/registeruser.png");
+    -fx-background-color: #06aad9;
+    -fx-background-repeat: stretch;
+    -fx-background-size:130.0 120.0;
+    -fx-background-position: center center;
+}
+#registerUser:hover:pressed{
+    -fx-background-color: #045F79;
+}
+#registerUser:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}
+#searchbycode {
+    -fx-background-image: url("/directory/searchbycode.png");
+    -fx-background-color: #06aad9;
+    -fx-background-repeat: stretch;
+    -fx-background-size:130.0 120.0;
+    -fx-background-position: center center;
+}
+#searchbycode:hover:pressed{
+    -fx-background-color: #045F79;
+}
+#searchbycode:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}
+#unpaidbills {
+    -fx-background-image: url("/directory/unpaidbills.png");
+    -fx-background-color: #06aad9;
+    -fx-background-repeat: stretch;
+    -fx-background-size:130.0 120.0;
+    -fx-background-position: center center;
+}
+#unpaidbills:hover:pressed{
+    -fx-background-color: #045F79;
+}
+#unpaidbills:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}
+
+#billinginvoice {
+    -fx-background-image: url("/directory/billinginvoice.png");
+    -fx-background-color: #06aad9;
+    -fx-background-repeat: stretch;
+    -fx-background-size:130.0 120.0;
+    -fx-background-position: center center;
+}
+#billinginvoice:hover:pressed{
+    -fx-background-color: #045F79;
+}
+#billinginvoice:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}
+#embryology {
+    -fx-background-image: url("/directory/embryology.png");
+    -fx-background-color: #06aad9;
+    -fx-background-repeat: stretch;
+    -fx-background-size:130.0 120.0;
+    -fx-background-position: center center;
+}
+#embryology:hover:pressed{
+    -fx-background-color: #045F79;
+}
+#embryology:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}
+#cryoA {
+    -fx-background-image: url("/directory/cryo-a.jpg");
+    -fx-background-color: #06aad9;
+    -fx-background-repeat: stretch;
+    -fx-background-size:130.0 120.0;
+    -fx-background-position: center center;
+}
+#cryoA:hover:pressed{
+    -fx-background-color: #045F79;
+}
+#cryoA:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}
+
+#cryoE {
+    -fx-background-image: url("/directory/cryo-e.jpg");
+    -fx-background-color: #06aad9;
+    -fx-background-repeat: stretch;
+    -fx-background-size:130.0 120.0;
+    -fx-background-position: center center;
+}
+#cryoE:hover:pressed{
+    -fx-background-color: #045F79;
+}
+#cryoE:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}
+
+#myArchive {
+    -fx-background-image: url("/directory/myarchive.png");
+    -fx-background-color: #06aad9;
+    -fx-background-repeat: stretch;
+    -fx-background-size:130.0 120.0;
+    -fx-background-position: center center;
+}
+#myArchive:hover:pressed{
+    -fx-background-color: #045F79;
+}
+#myArchive:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}
+
+#searchviascanning {
+    -fx-background-image: url("/directory/searchviascanning.png");
+    -fx-background-color: #06aad9;
+    -fx-background-repeat: stretch;
+    -fx-background-size:130.0 120.0;
+    -fx-background-position: center center;
+}
+#searchviascanning:hover:pressed{
+    -fx-background-color: #045F79;
+}
+#searchviascanning:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}
+#mismatches {
+    -fx-background-image: url("/directory/mismatches.png");
+    -fx-background-color: #06aad9;
+    -fx-background-repeat: stretch;
+    -fx-background-size:130.0 120.0;
+    -fx-background-position: center center;
+}
+#mismatches:hover:pressed{
+    -fx-background-color: #045F79;
+}
+#mismatches:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}
+#doctoroffice {
+    -fx-background-image: url("/directory/doctoroffice.png");
+    -fx-background-color: #06aad9;
+    -fx-background-repeat: stretch;
+    -fx-background-size:130.0 120.0;
+    -fx-background-position: center center;
+}
+#doctoroffice:hover:pressed{
+    -fx-background-color: #045F79;
+}
+#doctoroffice:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}
+#patientlist {
+    -fx-background-image: url("/directory/patientlist.png");
+    -fx-background-color: #06aad9;
+    -fx-background-repeat: stretch;
+    -fx-background-size:130.0 120.0;
+    -fx-background-position: center center;
+}
+#patientlist:hover:pressed{
+    -fx-background-color: #045F79;
+}
+#patientlist:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}
+#searchbyname {
+    -fx-background-image: url("/directory/searchbyname.png");
+    -fx-background-color: #06aad9;
+    -fx-background-repeat: stretch;
+    -fx-background-size:130.0 120.0;
+    -fx-background-position: center center;
+}
+#searchbyname:hover:pressed{
+    -fx-background-color: #045F79;
+}
+#searchbyname:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}
+#registernewpatient {
+     -fx-background-image: url("/directory/registernewpatient.png");
+     -fx-background-color: #06aad9;
+     -fx-background-repeat: stretch;
+     -fx-background-size:130.0 120.0;
+     -fx-background-position: center center;
+ }
+#registernewpatient:hover:pressed{
+    -fx-background-color: #045F79;
+}
+#registernewpatient:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}
+
+#stockManagement {
+    -fx-background-image: url("/directory/stockmanagement.png");
+    -fx-background-color: #06aad9;
+    -fx-background-repeat: stretch;
+     -fx-background-size:130.0 120.0;
+     -fx-background-position: center center;
+}
+#stockManagement:hover:pressed{
+    -fx-background-color: #045F79;
+}
+#stockManagement:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}
+#appointment {
+    -fx-background-image: url("/directory/appointment.png");
+    -fx-background-color: #06aad9;
+    -fx-background-repeat: stretch;
+     -fx-background-size:130.0 120.0;
+     -fx-background-position: center center;
+}
+#appointment:hover:pressed{
+    -fx-background-color: #045F79;
+}
+#appointment:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}
+#andrology {
+    -fx-background-image: url("/directory/andrology.png");
+    -fx-background-color: #06aad9;
+    -fx-background-repeat: stretch;
+    -fx-background-size:130.0 120.0;
+    -fx-background-position: center center;
+}
+#andrology:hover:pressed{
+    -fx-background-color: #045F79;
+}
+#andrology:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}
+#etTable {
+    -fx-background-image: url("/directory/ettable.png");
+    -fx-background-color: #06aad9;
+    -fx-background-repeat: stretch;
+    -fx-background-size:130.0 120.0;
+    -fx-background-position: center center;
+}
+#etTable:hover:pressed{
+    -fx-background-color: #045F79;
+}
+#etTable:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}
+#recentArchive {
+    -fx-background-image: url("/directory/recentarchive.png");
+    -fx-background-color: #06aad9;
+    -fx-background-repeat: stretch;
+    -fx-background-size:130.0 120.0;
+    -fx-background-position: center center;
+}
+#recentArchive:hover:pressed{
+    -fx-background-color: #045F79;
+}
+#recentArchive:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}
+#recentPage {
+    -fx-background-image: url("/directory/recentpage.png");
+    -fx-background-color: #06aad9;
+   	-fx-background-repeat: stretch;
+   	-fx-background-size:130.0 120.0;
+    -fx-background-position: center center;
+}
+#recentPage:hover:pressed{
+     -fx-background-color: #045F79;
+}
+#recentPage:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}

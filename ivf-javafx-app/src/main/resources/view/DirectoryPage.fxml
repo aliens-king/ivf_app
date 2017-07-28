@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<?import org.cf.card.util.EnumPermission.Module?>
+
+<BorderPane fx:id="directoryPane" prefHeight="985.0" prefWidth="1611.0" style="-fx-background-color: #06AAD9;" styleClass="layout-resolution-main" stylesheets="@../CSS/mvid.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.DirectoryPageController">
+   <center>
+      <AnchorPane prefWidth="1611.0" style="-fx-background-color: #06AAD9;" BorderPane.alignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <children>
+            <GridPane alignment="CENTER" hgap="1.0" layoutY="260.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="1609.0" vgap="5.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" percentWidth="9.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" percentWidth="9.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" percentWidth="9.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" percentWidth="9.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" percentWidth="9.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" percentWidth="9.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" percentWidth="9.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" percentWidth="9.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" percentWidth="9.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" percentWidth="9.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" percentWidth="9.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="150.0" minHeight="100.0" prefHeight="135.0" />
+                <RowConstraints maxHeight="150.0" minHeight="100.0" prefHeight="135.0" />
+                <RowConstraints maxHeight="150.0" minHeight="100.0" prefHeight="135.0" />
+              </rowConstraints>
+               <children>
+                  <AnchorPane GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="nurseStation" alignment="CENTER" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css" textAlignment="JUSTIFY">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.nursestation" wrapText="true" />
+                           </tooltip>
+		                   <userData>
+		                      <EnumPermission.Module fx:value="NURSES_STATION"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="standardInvestigation" alignment="CENTER" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css" textAlignment="JUSTIFY">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip text="%directory.tooltip.standardinvestigation" />
+                           </tooltip>
+                        	<userData>
+		                      <EnumPermission.Module fx:value="STANDARD_INVESTIGATION"/>
+		                   </userData>
+                        </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="registerUser" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.registeruser" wrapText="true" />
+                           </tooltip>
+                           <userData>
+		                      <EnumPermission.Module fx:value="REGISTER_USER"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="searchbycode" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.searchbycode" wrapText="true" />
+                           </tooltip>
+                           <userData>
+		                      <EnumPermission.Module fx:value="SEARCH_BY_NAME_CODE"/>
+		                   </userData>
+                        </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="unpaidbills" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.unpaidbills" wrapText="true" />
+                           </tooltip>
+                            <userData>
+		                      <EnumPermission.Module fx:value="UNPAID_BILL_OVERALL"/>
+		                   </userData>
+                        </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="billinginvoice" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.billinginvoice" wrapText="true" />
+                           </tooltip>
+                         	<userData>
+		                      <EnumPermission.Module fx:value="BILLING_AND_INVOICE"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="embryology" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.embryology" wrapText="true" />
+                           </tooltip>
+                           <userData>
+		                      <EnumPermission.Module fx:value="EMBRYOLOGY_OVERVIEW"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="cryoE" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.cryopreservation.e" wrapText="true" />
+                           </tooltip>
+                           <userData>
+		                      <EnumPermission.Module fx:value="CRYOPRESERVATION_E"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                   <AnchorPane GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="cryoA" alignment="CENTER" layoutX="18.0" layoutY="7.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css">
+                        <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.cryopreservation.a" wrapText="true" />
+                           </tooltip>
+                         	<userData>
+		                      <EnumPermission.Module fx:value="CRYOPRESERVATION_A"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="searchviascanning" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#searchViaScannningAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.searchviascanning" wrapText="true" />
+                           </tooltip>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="mismatches" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#mismatchAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.mismatches" wrapText="true" />
+                           </tooltip>
+                           <userData>
+		                      <EnumPermission.Module fx:value="MISMATCH"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="doctoroffice" alignment="CENTER" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css" textAlignment="JUSTIFY">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.doctoroffice" wrapText="true" />
+                           </tooltip>
+                         	<userData>
+		                      <EnumPermission.Module fx:value="DOCTORS_OFFICE"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="patientlist" alignment="CENTER" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css" textAlignment="JUSTIFY">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.patientlist" wrapText="true" />
+                           </tooltip>
+                         	<userData>
+		                      <EnumPermission.Module fx:value="PATIENT_LIST"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="searchbyname" alignment="CENTER" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css" textAlignment="JUSTIFY">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.searchbyname" wrapText="true" />
+                           </tooltip>
+                         	<userData>
+		                      <EnumPermission.Module fx:value="SEARCH_PATIENTS"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="registernewpatient" alignment="CENTER" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css" textAlignment="JUSTIFY">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.registernewpatient" wrapText="true" />
+                           </tooltip>
+                         	<userData>
+		                      <EnumPermission.Module fx:value="REGISTER_PATIENT"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="stockManagement" alignment="CENTER" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#stockManagementAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css" textAlignment="JUSTIFY">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.stockmanagement" wrapText="true" />
+                           </tooltip>
+                           <userData>
+		                      <EnumPermission.Module fx:value="STOCK_MAINTAINENCE"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="appointment" alignment="CENTER" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css" textAlignment="JUSTIFY">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.appointment" wrapText="true" />
+                           </tooltip>
+                            <userData>
+		                      <EnumPermission.Module fx:value="APPOINTMENT_OVERVIEW"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="andrology" alignment="CENTER" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css" textAlignment="JUSTIFY">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.andrology" wrapText="true" />
+                           </tooltip>
+                         	<userData>
+		                      <EnumPermission.Module fx:value="ANDROLOGY"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="etTable" alignment="CENTER" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css" textAlignment="JUSTIFY">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.ettable" wrapText="true" />
+                           </tooltip>
+                        	<userData>
+		                      <EnumPermission.Module fx:value="ET_TABLE"/>
+		                   </userData>
+                        </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                   <AnchorPane GridPane.columnIndex="8" GridPane.rowIndex="1">
+                     <children>
+                        <Button id="myArchive" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css">
+                        <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.myarchieve" wrapText="true" />
+                           </tooltip>
+                           <userData>
+		                      <EnumPermission.Module fx:value="ARCHIVE"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="recentArchive" alignment="CENTER" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.recentarchive" wrapText="true" />
+                           </tooltip>
+                        	<userData>
+		                      <EnumPermission.Module fx:value="RECENT_ARCHIVE"/>
+		                   </userData>
+                        </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="recentPage" alignment="CENTER" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#recentPageAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css" textAlignment="JUSTIFY">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.recentpage" wrapText="true" />
+                           </tooltip>
+                         	<userData>
+		                      <EnumPermission.Module fx:value="RECENT_PAGE"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                 <!--  <AnchorPane GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="refundBillOverall" alignment="CENTER" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css" textAlignment="JUSTIFY">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.refund.bill.overall" wrapText="true" />
+                           </tooltip>
+                         	<userData>
+		                      <EnumPermission.Module fx:value="REFUND_BILL_OVERALL"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane> -->
+                 <!--  <AnchorPane GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="doctoroffice" alignment="CENTER" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css" textAlignment="JUSTIFY">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.doctoroffice" wrapText="true" />
+                           </tooltip>
+                         	<userData>
+		                      <EnumPermission.Module fx:value="DOCTORS_OFFICE"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="doctoroffice" alignment="CENTER" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css" textAlignment="JUSTIFY">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.doctoroffice" wrapText="true" />
+                           </tooltip>
+                         	<userData>
+		                      <EnumPermission.Module fx:value="DOCTORS_OFFICE"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="doctoroffice" alignment="CENTER" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css" textAlignment="JUSTIFY">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.doctoroffice" wrapText="true" />
+                           </tooltip>
+                         	<userData>
+		                      <EnumPermission.Module fx:value="DOCTORS_OFFICE"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="doctoroffice" alignment="CENTER" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css" textAlignment="JUSTIFY">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.doctoroffice" wrapText="true" />
+                           </tooltip>
+                         	<userData>
+		                      <EnumPermission.Module fx:value="DOCTORS_OFFICE"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane> -->
+                  
+                  
+                  
+                   <AnchorPane GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="refundBillOverall" alignment="CENTER" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css" textAlignment="JUSTIFY">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.refund.bill.overall" wrapText="true" />
+                           </tooltip>
+                         	<userData>
+		                      <EnumPermission.Module fx:value="REFUND_BILL_OVERALL"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <!-- 
+                  <AnchorPane GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="doctoroffice" alignment="CENTER" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css" textAlignment="JUSTIFY">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.doctoroffice" wrapText="true" />
+                           </tooltip>
+                         	<userData>
+		                      <EnumPermission.Module fx:value="DOCTORS_OFFICE"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="doctoroffice" alignment="CENTER" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css" textAlignment="JUSTIFY">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.doctoroffice" wrapText="true" />
+                           </tooltip>
+                         	<userData>
+		                      <EnumPermission.Module fx:value="DOCTORS_OFFICE"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="doctoroffice" alignment="CENTER" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css" textAlignment="JUSTIFY">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.doctoroffice" wrapText="true" />
+                           </tooltip>
+                         	<userData>
+		                      <EnumPermission.Module fx:value="DOCTORS_OFFICE"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="doctoroffice" alignment="CENTER" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css" textAlignment="JUSTIFY">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.doctoroffice" wrapText="true" />
+                           </tooltip>
+                         	<userData>
+		                      <EnumPermission.Module fx:value="DOCTORS_OFFICE"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <children>
+                        <Button id="doctoroffice" alignment="CENTER" layoutX="18.0" layoutY="6.0" maxHeight="120.0" maxWidth="130.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="120.0" prefWidth="130.0" stylesheets="@../CSS/Directory.css" textAlignment="JUSTIFY">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip autoHide="true" text="%directory.tooltip.doctoroffice" wrapText="true" />
+                           </tooltip>
+                         	<userData>
+		                      <EnumPermission.Module fx:value="DOCTORS_OFFICE"/>
+		                   </userData>
+                         </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane> -->
+               </children>
+            </GridPane>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="44.0" prefWidth="1603.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/directory.png" />
+               </image></ImageView>
+            <Text fill="WHITE" layoutX="69.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%directory.text.directory">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="1497.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/user_account.png" />
+               </image></ImageView>
+            <Text fx:id="loginText" fill="#f9fcfb" layoutX="1355.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%directory.text.testname" AnchorPane.topAnchor="3.50732421875" AnchorPane.rightAnchor="70">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+         </children>
+         <BorderPane.margin>
+            <Insets left="40.0" right="40.0" top="40.0" />
+         </BorderPane.margin></AnchorPane>
+   </top>
+
+   <bottom>
+      <GridPane prefHeight="47.0" prefWidth="1582.0" BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="669.0" minWidth="10.0" prefWidth="405.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="934.0" minWidth="0.0" prefWidth="864.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="458.0" minWidth="10.0" prefWidth="392.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="20.0" prefWidth="448.0" style="-fx-font-size: 16;" text="%footer.label.copywrite.message" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="currentDate" style="-fx-font-size: 24;" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
+            <Label style="-fx-font-size: 16;" text="%common.label.createdby" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+      </GridPane>
+   </bottom>
+</BorderPane>

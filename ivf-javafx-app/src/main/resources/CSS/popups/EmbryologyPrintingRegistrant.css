@@ -1,0 +1,15 @@
+.embryo-registrant-header-label {
+   	-fx-font-family: "Open Sans Bold";
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-background-color: #FFFFFF;
+    -fx-color:#000000; 
+   
+}
+
+.embryo-registrant-value-label {
+    -fx-font-family: "Open Sans Normal";
+    -fx-font-size: 10px;
+    -fx-background-color: #FFFFFF;
+    -fx-color:#000000; 
+}

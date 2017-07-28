@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+<?import org.cf.card.util.EnumPermission.Module?>
+
+<BorderPane fx:id="mainBorderPane" prefHeight="985.0" prefWidth="1611.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.MainPageController">
+    <top>
+        <AnchorPane prefHeight="80.0" prefWidth="938.0" style="-fx-background-color: #3498db;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="134.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../icons/home_button.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="71.0" fitWidth="71.0" layoutX="95.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="95.0" AnchorPane.topAnchor="32.0">
+                    <image>
+                        <Image url="@../icons/user_account.png" />
+                    </image>
+                </ImageView>
+                <Text fx:id="loginText" fill="#ecf0f1" layoutX="186.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%mainpage.text.name" AnchorPane.leftAnchor="186.0" AnchorPane.topAnchor="53.3388671875">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Text>
+            <Button id="exit" fx:id="closeButton" layoutX="858.0" layoutY="47.0" mnemonicParsing="false" onAction="#handleCloseButton" prefHeight="40.0" prefWidth="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="47.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="logOut" fx:id="logOutButton" layoutX="1348.0" layoutY="48.0" mnemonicParsing="false" onAction="#logOutAction" prefHeight="40.0" prefWidth="40.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="47.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="directory" fx:id="directoryButton" layoutX="1278.0" layoutY="48.0" mnemonicParsing="false" onAction="#directoryAction" prefHeight="40.0" prefWidth="40.0" AnchorPane.rightAnchor="320.0" AnchorPane.topAnchor="47.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="administratorWarningLabel" layoutX="95.0" layoutY="110.0" textFill="WHITE" AnchorPane.leftAnchor="95.0" AnchorPane.topAnchor="110.0" />
+            <Button id="maximize" fx:id="maximize" layoutX="1459.0" layoutY="43.0" mnemonicParsing="false" onAction="#maximizeAction" prefHeight="48.0" prefWidth="48.0" AnchorPane.rightAnchor="104.0" AnchorPane.topAnchor="43.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="minimize" fx:id="minimize" layoutX="1387.0" layoutY="43.0" mnemonicParsing="false" onAction="#minimizeAction" prefHeight="48.0" prefWidth="48.0" AnchorPane.rightAnchor="176.0" AnchorPane.topAnchor="43.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <FlowPane hgap="12.0" layoutY="29.0" prefHeight="80" prefWidth="720.0" prefWrapLength="0.0" AnchorPane.leftAnchor="550.0">
+              <!--  <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" percentWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="0.0" minWidth="0.0" percentWidth="20.0" prefWidth="0.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" percentWidth="30.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints> -->
+               <children>
+                  <Label fx:id="mainPageTitle" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="80.0" styleClass="titleText" text="%mainpage.label.title" GridPane.halignment="RIGHT" />
+                  <ImageView fx:id="mainPageIcon" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" styleClass="titleImage" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                     <effect>
+                        <DropShadow color="WHITE" spread="0.65" />
+                     </effect></ImageView>
+					<Label fx:id="titleDescription" alignment="CENTER_RIGHT" prefHeight="80.0" styleClass="titleDescription" text="%mainpage.label.description" GridPane.columnIndex="2" GridPane.halignment="LEFT" />
+               </children>
+            </FlowPane>
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </AnchorPane>
+    </top>
+   <left>
+      <AnchorPane prefHeight="425.0" prefWidth="64.0" style="-fx-background-color: #06aad9;" BorderPane.alignment="CENTER">
+         <children>
+            <ToggleButton fx:id="searchPatients" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#buttonAction" prefHeight="74.0" prefWidth="64.0" selected="true" text="%mainpage.togglebutton.search" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group" />
+               </toggleGroup>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Open Sans" size="11.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+                <userData>
+                   <EnumPermission.Module fx:value="SEARCH_PATIENTS"/>
+                </userData>
+            </ToggleButton>
+            <ToggleButton id="addPatients" fx:id="addPatients" alignment="BOTTOM_CENTER" layoutY="74.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="74.0" prefWidth="64.0" text="%mainpage.togglebutton.new" textFill="WHITE" toggleGroup="$group" AnchorPane.leftAnchor="0.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="11.0" />
+               </font>
+                <userData>
+                   <EnumPermission.Module fx:value="REGISTER_PATIENT"/>
+                </userData>
+            </ToggleButton>
+            <ToggleButton id="printPatients" fx:id="patientsList" alignment="BOTTOM_CENTER" layoutY="148.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="74.0" prefWidth="64.0" text="%mainpage.togglebutton.print" textFill="WHITE" toggleGroup="$group" AnchorPane.leftAnchor="0.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <userData>
+                   <EnumPermission.Module fx:value="PATIENT_LIST"/>
+                </userData>
+            </ToggleButton>
+            <ToggleButton id="accountDetails" fx:id="accountDetails" alignment="BOTTOM_CENTER" layoutY="222.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="74.0" prefWidth="64.0" text="%mainpage.togglebutton.detail" textFill="WHITE" toggleGroup="$group" AnchorPane.leftAnchor="0.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <userData>
+                   <EnumPermission.Module fx:value="USER_DETAILS"/>
+                </userData>
+            </ToggleButton>
+            <ToggleButton id="addUsers" fx:id="addAccounts" alignment="BOTTOM_CENTER" layoutY="296.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="74.0" prefWidth="64.0" text="%mainpage.togglebutton.new" textFill="WHITE" toggleGroup="$group" AnchorPane.leftAnchor="0.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <userData>
+                   <EnumPermission.Module fx:value="REGISTER_USER"/>
+                </userData>
+            </ToggleButton>
+            <ToggleButton id="embryo" fx:id="embryology" alignment="BOTTOM_CENTER" layoutY="369.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="74.0" prefWidth="64.0" text="%mainpage.togglebutton.embryo" textFill="WHITE" toggleGroup="$group" AnchorPane.leftAnchor="0.0">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <userData>
+                   <EnumPermission.Module fx:value="EMBRYOLOGY_OVERVIEW"/>
+                </userData>
+            </ToggleButton>
+            <ToggleButton id="stInvestion" fx:id="standardInvestigation" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutY="443.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="74.0" prefWidth="64.0" text="%mainpage.togglebutton.st" textFill="WHITE" toggleGroup="$group">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <userData>
+                   <EnumPermission.Module fx:value="STANDARD_INVESTIGATION"/>
+                </userData>
+            </ToggleButton>
+            <ToggleButton id="cryopreservationEmbry" fx:id="cryopreservationEmbry" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutY="517.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="74.0" prefWidth="64.0" text="%mainpage.togglebutton.cryo.e" textFill="WHITE" toggleGroup="$group" wrapText="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <userData>
+                   <EnumPermission.Module fx:value="CRYOPRESERVATION_E"/>
+                </userData>
+            </ToggleButton>
+            <ToggleButton id="andrologySemen" fx:id="andrologyToggleButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutY="591.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="74.0" prefWidth="64.0" text="%mainpage.togglebutton.andro" textFill="WHITE" toggleGroup="$group" wrapText="true" AnchorPane.leftAnchor="0.0">
+         		<cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                <userData>
+                   <EnumPermission.Module fx:value="ANDROLOGY"/>
+                </userData>
+            </ToggleButton>
+            <ToggleButton id="cryopreservationSemen" fx:id="cryopreservationSemen" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutY="665.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="74.0" prefWidth="64.0" text="%mainpage.togglebutton.cryo.a" textFill="WHITE" toggleGroup="$group" wrapText="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <userData>
+                   <EnumPermission.Module fx:value="CRYOPRESERVATION_A"/>
+                </userData>
+            </ToggleButton>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <StackPane fx:id="centerPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <right>
+	   <AnchorPane minHeight="10.0" prefHeight="425.0" prefWidth="64.0" style="-fx-background-color: #06aad9;" BorderPane.alignment="CENTER">
+		   <children>
+		   <ToggleButton id="appointment" fx:id="appointmentToggleButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonAction" prefHeight="74.0" prefWidth="64.0" text="%mainpage.togglebutton.ao" textFill="WHITE" toggleGroup="$group" AnchorPane.rightAnchor="0.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <userData>
+                   <EnumPermission.Module fx:value="APPOINTMENT_OVERVIEW"/>
+                </userData>
+            </ToggleButton>
+             <ToggleButton id="doctorOffice" fx:id="doctorOfficeToggleButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutY="74.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="74.0" prefWidth="64.0" text="%mainpage.togglebutton.do" textFill="WHITE" toggleGroup="$group" AnchorPane.rightAnchor="0.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+             	 <userData>
+                   <EnumPermission.Module fx:value="DOCTORS_OFFICE"/>
+                </userData>
+             </ToggleButton>
+		   	<ToggleButton id="nurseStation" fx:id="nurseStationToggleButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutY="149.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="74.0" prefWidth="64.0" text="%mainpage.togglebutton.ns" textFill="WHITE" toggleGroup="$group" AnchorPane.rightAnchor="0.0"><cursor><Cursor fx:constant="HAND" /></cursor>
+		   		<cursor>
+                  <Cursor fx:constant="HAND" />
+                </cursor>
+                  <userData>
+                   <EnumPermission.Module fx:value="NURSES_STATION"/>
+                </userData>
+		   	</ToggleButton>
+            <ToggleButton id="etTable" fx:id="etTableToggleButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="223.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="74.0" prefWidth="64.0" text="%mainpage.togglebutton.et" textFill="WHITE" toggleGroup="$group" AnchorPane.rightAnchor="0.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <userData>
+                   <EnumPermission.Module fx:value="ET_TABLE"/>
+                </userData>
+            </ToggleButton>
+            <ToggleButton id="cycles" fx:id="cyclesToggleButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="298.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="74.0" prefWidth="64.0" text="%mainpage.togglebutton.cy" textFill="WHITE" toggleGroup="$group" AnchorPane.rightAnchor="0.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <userData>
+                   <EnumPermission.Module fx:value="CYCLES"/>
+                </userData>
+            </ToggleButton>
+            <ToggleButton id="companyDetails" fx:id="companyDetailsToggleButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="373.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="74.0" prefWidth="64.0" text="%mainpage.togglebutton.comp" textFill="WHITE" toggleGroup="$group" AnchorPane.rightAnchor="0.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <userData>
+                   <EnumPermission.Module fx:value="COMPANY_DETAILS"/>
+                </userData>
+            </ToggleButton>
+
+             <ToggleButton id="myArchive" fx:id="archiveToggleButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="450.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="74.0" prefWidth="64.0" text="%mainpage.togglebutton.archive" textFill="WHITE" toggleGroup="$group" AnchorPane.rightAnchor="0.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <userData>
+                   <EnumPermission.Module fx:value="ARCHIVE"/>
+                </userData>
+            </ToggleButton>
+            <ToggleButton id="pregnanyOutcomes" fx:id="pregnancyToggleButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="527.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="74.0" prefWidth="64.0" text="%mainpage.togglebutton.pregnancy" textFill="WHITE" toggleGroup="$group" AnchorPane.rightAnchor="0.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <userData>
+                   <EnumPermission.Module fx:value="PREGNANCY_OUTCOMES"/>
+                </userData>
+            </ToggleButton>
+            <ToggleButton id="billingAndInvoice" fx:id="billingAndInvoiceToggleButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="604.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="74.0" prefWidth="64.0" text="%mainpage.togglebutton.billing.and.invoice" textFill="WHITE" toggleGroup="$group" AnchorPane.rightAnchor="0.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <userData>
+                   <EnumPermission.Module fx:value="BILLING_AND_INVOICE"/>
+                </userData>
+            </ToggleButton>
+            <ToggleButton id="unpaidBill" fx:id="unpaidBillToggleButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="681.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="74.0" prefWidth="64.0" text="%mainpage.togglebutton.unpaid.bill" textFill="WHITE" toggleGroup="$group" AnchorPane.rightAnchor="0.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <userData>
+                   <EnumPermission.Module fx:value="UNPAID_BILL_OVERALL"/>
+                </userData>
+            </ToggleButton>
+		   </children>
+	   </AnchorPane>
+   </right>
+</BorderPane>

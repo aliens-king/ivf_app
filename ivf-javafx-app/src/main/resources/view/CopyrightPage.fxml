@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" opacity="1" prefHeight="985.0" prefWidth="1611.0" style="-fx-background-color: #0AC4EF;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.CopyrightPageController">
+   <bottom>
+      <Label id="botomLabel" prefHeight="48.0" prefWidth="1610.0" text="%footer.label.copywrite.message" textFill="WHITE" BorderPane.alignment="BOTTOM_LEFT">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="14.0" left="14.0" />
+         </padding>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </bottom>
+   <center>
+       <AnchorPane id="copyrightRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="814.0" prefWidth="1547.0">
+           <children>
+               <Label layoutX="871.0" layoutY="346.0" text="%copyright.label.artlab" textFill="WHITE">
+                   <font>
+                       <Font name="System Italic" size="23.0" />
+                   </font>
+               </Label>
+               <ImageView fitHeight="114.0" fitWidth="278.0" layoutX="601.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true">
+                   <image>
+                       <Image url="@../icons/logo.png" />
+                   </image>
+               </ImageView>
+            <ImageView fx:id="companyLogoImageView" fitHeight="150.0" fitWidth="200.0" layoutX="1320.0" layoutY="710.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-46.0" AnchorPane.rightAnchor="27.0" />
+            <Label fx:id="companyNameLabel" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="784.0" layoutY="868.0" prefHeight="32.0" prefWidth="735.0" textFill="WHITE" AnchorPane.bottomAnchor="-86.0" AnchorPane.rightAnchor="28.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+           </children>
+       </AnchorPane>
+   </center>
+</BorderPane>

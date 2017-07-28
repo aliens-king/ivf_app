@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.RefundAndInvoiceController">
+   <styleClass>
+      <String fx:value="root" />
+      <String fx:value="layout-resolution-includes" />
+      <String fx:value="refund-module-backgroud" />
+      <String fx:value="refund-module-label" />
+      <String fx:value="refund-module-text" />
+   </styleClass>
+   <children>
+    <fx:include fx:id="commonDetail" source="CommonDetail.fxml" />
+      <GridPane layoutX="60.0" layoutY="280.0" prefHeight="410.0" prefWidth="1300.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="60.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="1.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="22.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="1.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="16.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" percentHeight="70.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+               <children>
+                  <HBox spacing="50.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="100.0" text="%payment.detail.controller.invoice.label" />
+                              <TextField fx:id="refundInvoiceNumberTextField" prefHeight="30.0" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="30.0" prefWidth="247.0">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="116.0" text="%refund.bill.date" />
+                              <TextField fx:id="refundDateTextField" prefHeight="30.0" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <TableView fx:id="proceduresTableView" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+              <columns>
+                <TableColumn fx:id="refundSno" prefWidth="135.0" text="%common.label.sr.no" />
+                <TableColumn fx:id="refundProcedureName" prefWidth="325.0" text="%billing.setup.procedure.name" />
+                  <TableColumn fx:id="refundProcedurePrice" prefWidth="317.0" text="%billing.setup.procedure.price" />
+              </columns>
+            </TableView>
+            <VBox prefWidth="188.0" spacing="18.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <children>
+                  <Button id="markAll" mnemonicParsing="false" onAction="#refundAddProcedureAction" prefHeight="30.0" prefWidth="150.0" text="%billing.invoice.add.procedure">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button id="new-screen-button" mnemonicParsing="false" onAction="#refundsAction" prefHeight="30.0" prefWidth="150.0" text="%refund.bill.all.refunds">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#editRemarksAction" prefHeight="30.0" prefWidth="150.0" text="%pregnancy.outcomes.edit.button" />
+                  <Button mnemonicParsing="false" onAction="#saveRemarksAction" prefHeight="30.0" prefWidth="150.0" text="%pregnancy.outcomes.save.button" />
+                  <Button mnemonicParsing="false" onAction="#printAction" prefHeight="30.0" prefWidth="150.0" text="%common.button.print">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <Label alignment="CENTER" prefHeight="62.0" prefWidth="303.0" text="%common.label.remarks">
+                     <styleClass>
+                        <String fx:value="blueLabelClass" />
+                        <String fx:value="custom-common-text-size" />
+                     </styleClass></Label>
+                  <TextArea fx:id="remarksTextArea" prefHeight="330.0" prefWidth="303.0" wrapText="true" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.rowIndex="2">
+               <children>
+                  <HBox spacing="30.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="100.0" text="%billing.invoice.subtotal" />
+                              <TextField fx:id="refundSubTotalTextField" prefHeight="30.0" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label fx:id="vatLabel" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin></Label>
+                              <TextField fx:id="refundVatTextField" prefHeight="30.0" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0" text="%billing.invoice.total">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin></Label>
+                              <TextField fx:id="refundTotalBillTextField" prefHeight="30.0" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <GridPane.margin>
+               <Insets top="30.0" />
+               </GridPane.margin>
+            </VBox>
+         </children>
+      </GridPane>
+      <fx:include source="CommonFooter.fxml" />
+   </children>
+   <stylesheets>
+      <URL value="@../CSS/mvid.css" />
+      <URL value="@../CSS/RefundModule.css" />
+   </stylesheets>
+</AnchorPane>

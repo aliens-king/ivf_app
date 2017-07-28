@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="2000.0" maxWidth="2000.0" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../CSS/mvid.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.AddPatientsController">
+    <children>
+        <Text fill="WHITE" layoutX="30.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="headerLebel" text="%commondetail.label.womaninfo.title" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="21.72265625">
+            <font>
+                <Font name="Open Sans" size="24.0" />
+            </font>
+        </Text>
+        <Button id="deleteSelected" fx:id="womanClearButton" layoutX="880.0" layoutY="67.0" mnemonicParsing="false" onAction="#womanClearButtonAction" prefHeight="30.0" prefWidth="170.0" text="%patient.button.clear" textFill="WHITE" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="67.0">
+            <font>
+                <Font name="Open Sans" size="15.0" />
+            </font>
+        </Button>
+      <Text fill="WHITE" layoutX="65.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.surname.required" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="75.0">
+         <font>
+            <Font name="Open Sans" size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="womanSurnameTextField" layoutX="189.0" layoutY="63.0" prefHeight="25.0" prefWidth="300.0" AnchorPane.leftAnchor="215.0" AnchorPane.topAnchor="70.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Text fill="WHITE" layoutX="50.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.firstname.required" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="125.0">
+         <font>
+            <Font name="Open Sans" size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="womanFirstNameTextField" layoutX="189.0" layoutY="120.0" prefHeight="25.0" prefWidth="300.0" AnchorPane.leftAnchor="215.0" AnchorPane.topAnchor="120.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </TextField>
+      <Text fill="WHITE" layoutX="64.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.middlename" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="175.0">
+         <font>
+            <Font name="Open Sans" size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="womanMiddleNameTextField" layoutX="189.0" layoutY="180.0" prefHeight="25.0" prefWidth="300.0" AnchorPane.leftAnchor="215.0" AnchorPane.topAnchor="170.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </TextField>
+      <Text fill="WHITE" layoutX="546.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.dateofbirth.required" AnchorPane.leftAnchor="545.0" AnchorPane.topAnchor="75.0">
+         <font>
+            <Font name="Open Sans" size="17.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="61.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.homeaddress" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="225.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="womanHomeAddressTextField" layoutX="189.0" layoutY="234.0" prefHeight="25.0" prefWidth="300.0" AnchorPane.leftAnchor="215.0" AnchorPane.topAnchor="220.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Text fill="WHITE" layoutX="62.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.phoneNumber" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="275.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="womanPhoneNumberTextField" layoutX="189.0" layoutY="274.0" prefHeight="25.0" prefWidth="300.0" AnchorPane.leftAnchor="215.0" AnchorPane.topAnchor="270.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Text fill="WHITE" layoutX="64.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.email.required" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="325.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="womanEmailTextField" layoutX="189.0" layoutY="324.0" prefHeight="25.0" prefWidth="300.0" AnchorPane.leftAnchor="215.0" AnchorPane.topAnchor="320.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Text fill="WHITE" layoutX="30.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="headerLebel" text="%patient.partnerinfo.title" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="367.72265625">
+         <font>
+            <Font name="Open Sans" size="24.0" />
+         </font>
+      </Text>
+      <Button id="deleteSelected" fx:id="partnerClearButton" layoutX="880.0" layoutY="420.0" mnemonicParsing="false" onAction="#partnerClearButtonAction" prefHeight="30.0" prefWidth="170.0" text="%patient.button.clear" textFill="WHITE" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="420.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Button>
+      <Text fill="WHITE" layoutX="60.0" layoutY="444.77978515625" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.surname.required" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="429.0">
+         <font>
+            <Font name="Open Sans" size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="partnerSurnameTextField" layoutX="215.0" layoutY="424.0" prefHeight="25.0" prefWidth="300.0" AnchorPane.leftAnchor="215.0" AnchorPane.topAnchor="424.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </TextField>
+      <Text fill="WHITE" layoutX="60.0" layoutY="494.77978515625" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.firstname.required" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="479.0">
+         <font>
+            <Font name="Open Sans" size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="partnerFirstNameTextField" layoutX="215.0" layoutY="474.0" prefHeight="25.0" prefWidth="300.0" AnchorPane.leftAnchor="215.0" AnchorPane.topAnchor="474.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </TextField>
+      <Text fill="WHITE" layoutX="60.0" layoutY="544.77978515625" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.middlename" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="529.0">
+         <font>
+            <Font name="Open Sans" size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="partnerMiddleNameTextField" layoutX="215.0" layoutY="524.0" prefHeight="25.0" prefWidth="300.0" AnchorPane.leftAnchor="215.0" AnchorPane.topAnchor="524.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </TextField>
+      <Text fill="WHITE" layoutX="545.0" layoutY="441.77978515625" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.dateofbirth.required" AnchorPane.leftAnchor="545.0" AnchorPane.topAnchor="426.0">
+         <font>
+            <Font name="Open Sans" size="17.0" />
+         </font>
+      </Text>
+            <Text fill="WHITE" layoutX="60.0" layoutY="594.77978515625" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.homeaddress" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="579.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="partnerHomeAddressTextField" layoutX="215.0" layoutY="574.0" prefHeight="25.0" prefWidth="300.0" AnchorPane.leftAnchor="215.0" AnchorPane.topAnchor="574.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Text fill="WHITE" layoutX="60.0" layoutY="644.77978515625" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.phoneNumber" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="629.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="partnerPhoneNumberTextField" layoutX="215.0" layoutY="624.0" prefHeight="25.0" prefWidth="300.0" AnchorPane.leftAnchor="215.0" AnchorPane.topAnchor="624.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Text fill="WHITE" layoutX="60.0" layoutY="694.77978515625" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.email.required" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="679.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="partnerEmailTextField" layoutX="215.0" layoutY="674.0" prefHeight="25.0" prefWidth="300.0" AnchorPane.leftAnchor="215.0" AnchorPane.topAnchor="674.0">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <ComboBox fx:id="partnerGenderComboBox" layoutX="675.0" layoutY="473.0" prefHeight="25.0" prefWidth="90.0" AnchorPane.leftAnchor="675.0" AnchorPane.topAnchor="473.0" />
+      <Text fill="WHITE" layoutX="545.0" layoutY="491.77978515625" strokeType="OUTSIDE" strokeWidth="0.0" text="%patient.gender.required" AnchorPane.leftAnchor="545.0" AnchorPane.topAnchor="476.0">
+         <font>
+            <Font name="Open Sans" size="17.0" />
+         </font>
+      </Text>
+      <Button id="saveAccount" fx:id="saveButton" layoutX="60.0" layoutY="737.0" mnemonicParsing="false" onAction="#saveAction" prefHeight="30.0" prefWidth="170.0" text="%common.button.save" textFill="WHITE" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="737.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Button>
+      <Button id="deleteSelected" fx:id="clearButton" layoutX="250.0" layoutY="737.0" mnemonicParsing="false" onAction="#clearAction" prefHeight="30.0" prefWidth="170.0" text="%common.button.clearall" textFill="WHITE" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="737.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Button>
+      <Text fx:id="womanSurnameErrorLabel" fill="WHITE" layoutX="220.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="womanFirstNameErrorLabel" fill="WHITE" layoutX="220.0" layoutY="161.77978515625" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="womanMiddleNameErrorLabel" fill="WHITE" layoutX="220.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="womanDOBErrorLabel" fill="WHITE" layoutX="680.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;">
+         <font>
+            <Font name="Open Sans" size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="womanDayErrorLabel" fill="WHITE" layoutX="908.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;">
+         <font>
+            <Font name="Open Sans" size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="manDayErrorLabel" fill="WHITE" layoutX="908.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;">
+         <font>
+            <Font name="Open Sans" size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="manGenderErrorLabel" fill="WHITE" layoutX="677.0" layoutY="517.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;">
+         <font>
+            <Font name="Open Sans" size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="manDOBErrorLabel" fill="WHITE" layoutX="677.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;">
+         <font>
+            <Font name="Open Sans" size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="manMonthErrorLabel" fill="WHITE" layoutX="778.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;">
+         <font>
+            <Font name="Open Sans" size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="manSurnameErrorLabel" fill="WHITE" layoutX="220.0" layoutY="466.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="manMiddleNameErrorLabel" fill="WHITE" layoutX="220.0" layoutY="566.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="manFirstNameErrorLabel" fill="WHITE" layoutX="220.0" layoutY="516.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="womanMonthErrorLabel" fill="WHITE" layoutX="778.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;">
+         <font>
+            <Font name="Open Sans" size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="coupleExistent" fill="WHITE" layoutX="63.0" layoutY="416.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="12.0" />
+         </font></Text>
+
+
+      <Text fx:id="womanPhoneNumberErrorLabel" fill="WHITE" layoutX="220.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="womanEmailErrorLabel" fill="WHITE" layoutX="220.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="manPhoneNumberErrorLabel" fill="WHITE" layoutX="220.0" layoutY="666.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="manEmailErrorLabel" fill="WHITE" layoutX="220.0" layoutY="714.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="womanDOBDatePicker" layoutX="676.0" layoutY="122.0" prefHeight="20.0" prefWidth="195.0" AnchorPane.leftAnchor="675.0" AnchorPane.topAnchor="70.0" />
+      <DatePicker fx:id="partnerDOBDatePicker" layoutX="675.0" layoutY="423.0" prefHeight="20.0" prefWidth="195.0" AnchorPane.leftAnchor="675.0" AnchorPane.topAnchor="423.0" />
+    </children>
+    <fx:include source="CommonFooter.fxml" />
+   <styleClass>
+      <String fx:value="layout-resolution-includes" />
+      <String fx:value="root" />
+   </styleClass>
+</AnchorPane>

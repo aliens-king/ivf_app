@@ -1,0 +1,215 @@
+@font-face {
+	-fx-font-family: "Open Sans";
+	src: url('fonts/OpenSans-Regular.ttf');
+}
+
+/*Common properties*/
+
+/*Button*/
+.custom-common-button{
+	-fx-pref-height: 30px;
+    -fx-pref-width: 150px;
+}
+
+/*Text-Field*/
+.custom-common-text-field{
+	-fx-pref-height: 30px;
+    -fx-pref-width: 300px;
+}
+/*Label and Text size*/
+.custom-common-text-size .text{
+	-fx-font-size: 17px;
+}
+
+/*Header Label and Text Color*/
+.blueLabelClass{
+    -fx-background-color: #06aad9;
+    -fx-text-fill: white;
+}
+
+
+
+.page-header-label .text{
+	-fx-font-size: 24px;
+}
+
+.text {
+	-fx-font-size: 14px;
+	-fx-text-fill: #FFFFFF;
+	-fx-font-family: "Open Sans";
+}
+
+
+.layout-resolution-main{
+	-fx-pref-width : 1611;
+	-fx-pref-height : 985;
+
+}
+.layout-resolution-includes{
+	-fx-pref-width : 1435;
+	-fx-pref-height : 687;
+
+}
+.headerLebel {
+	-fx-font-size: 18px;
+}
+.label{
+	-fx-font-size: 12px;
+}
+
+#new-screen-button {
+	  -fx-background-color: #B73630;
+}
+
+#new-screen-button:hover {
+	  -fx-background-color: linear-gradient(#B73630, #CE4D46);
+}
+
+.button {
+	/*-fx-font-size: 15px;*/
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Open Sans";
+    -fx-background-color: #3CBAFF;
+}
+
+.button:hover:pressed{
+    -fx-background-color: #004A6F;
+}
+
+.button:hover{
+    -fx-background-color: linear-gradient(#3ABDFF,  #71D0FF);
+}
+
+.text-area {
+ 	-fx-font-size: 15px;
+ 	-fx-font-smoothing-type: lcd;
+}
+
+
+
+.root {
+	-fx-background: #2980b9;
+	-fx-font-family: "Open Sans";
+	
+}
+
+.common-detail-lable{
+	-fx-font-size: 12px;
+	-fx-text-fill: White;
+}
+
+.footerLabel {
+	-fx-font-size: 11px;
+	-fx-text-fill: White;
+/* 	-fx-alignment: top-center;*/
+}
+
+.table-view {
+   /*  -fx-base: #A52A2A; */
+    /* -fx-control-inner-background: #1d1d1d; */
+   /*  -fx-background-color: WHITE; */
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    /* -fx-padding: 5;
+    -fx-fixed-cell-size:2px; */
+}
+
+.table-view .column-header-background {
+   /*  -fx-background-color: transparent; */
+}
+
+.table-view .column-header, .table-view .filler {
+	/* -fx-size:20px; */
+	-fx-background-color: #06aad9;
+    -fx-size: 5;
+    -fx-border-width: 0 0 0 0;
+    -fx-border-color:
+        transparent
+        transparent
+        derive(-fx-base, 80%)
+        transparent;
+    -fx-border-insets: 0 0 0 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 12px;
+    -fx-font-family: "Open Sans";
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-opacity: 1;
+}
+
+/* .table-view:focused .table-row-cell:filled:focused:selected {
+	-fx-background-color: #A52A2A;
+    -fx-background-color: -fx-focus-color;
+}
+*/
+.table-cell {
+    -fx-alignment: CENTER;
+}
+
+
+.gridLabel
+{
+   -fx-background-color:  #06AAD9;
+   -fx-text-fill: White;
+   -fx-font-size: medium;
+   -fx-font-weight: normal
+}
+
+.label-text{
+   -fx-background-color:  #06AAD9;
+   -fx-text-fill: White;
+   -fx-font-size: 18px;
+   -fx-font-weight: normal
+}
+
+
+.date-picker .arrow{
+    -fx-background-color: #ffffff;
+}
+
+.date-picker .arrow-button{
+    -fx-background-color: #3ABDFF;
+}
+#exit {
+    -fx-background-image: url("/icons/exit_btn.png");
+}
+
+.date-picker-popup > * > .spinner {
+    -fx-background-color: transparent;
+}
+.date-picker-popup > .month-year-pane  {
+    -fx-background-color:  #3ABDFF;
+}
+.date-picker .day-name-cell{
+   -fx-background-color: #88d7ff;
+}
+.date-picker-popup > * > .day-cell  {
+    -fx-background-color:  #c3ebff;
+    -fx-font-size: 1px;
+}
+.date-picker-popup > * > .day-cell:hover {
+    -fx-background-color: #34AAE5;
+}
+.date-picker-popup > * > .previous-month,
+.date-picker-popup > * > .next-month {
+   -fx-background-color: #ebf8ff;
+}
+.date-picker-popup > * > .previous-month:hover,
+.date-picker-popup > * > .next-month:hover {
+   -fx-background-color: #C0C0C0;
+}
+#remarks {
+	-fx-font-size: 18px;
+}
+
+
+.registrant-gridpane {
+    -fx-border-color : #000000;
+ 	-fx-pref-width : 250px;
+	-fx-pref-height : 115px;
+	-fx-max-width : 250px;
+	-fx-max-height : 115px;	
+	-fx-padding: 3;
+}

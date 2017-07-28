@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane stylesheets="@../CSS/mvid.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.CompanyDetailsController">
+   <styleClass>
+      <String fx:value="root" />
+      <String fx:value="layout-resolution-includes" />
+   </styleClass>
+   <children>
+      <Text fill="WHITE" layoutX="38.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="companyLabel" text="%company.controller.company.header" wrappingWidth="450.125">
+         <font>
+            <Font name="Open Sans" size="24.0" />
+         </font>
+      </Text>
+      <GridPane layoutX="60.0" layoutY="50.0" prefHeight="494.0" prefWidth="1315.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" percentWidth="13.0" prefWidth="163.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="435.0" minWidth="10.0" percentWidth="32.0" prefWidth="387.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="435.0" minWidth="10.0" percentWidth="10.0" prefWidth="387.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="435.0" minWidth="10.0" percentWidth="13.0" prefWidth="387.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="435.0" minWidth="10.0" percentWidth="32.0" prefWidth="387.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="109.0" minHeight="10.0" percentHeight="15.0" prefHeight="83.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="164.0" minHeight="10.0" percentHeight="16.0" prefHeight="79.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="159.0" minHeight="10.0" percentHeight="31.0" prefHeight="90.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="159.0" minHeight="10.0" percentHeight="5.0" prefHeight="90.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="203.0" minHeight="10.0" percentHeight="31.0" prefHeight="184.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox spacing="10.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+               <children>
+                  <Button id="markAll" mnemonicParsing="false" onAction="#billingSetupScreenAction" styleClass="custom-common-button" text="%mainpage.title.billing.setup" />
+                  <Button mnemonicParsing="false" onAction="#editAction" styleClass="custom-common-button" text="%company.controller.company.edit.button" />
+                  <Button mnemonicParsing="false" onAction="#saveAction" styleClass="custom-common-button" text="%company.controller.company.save.button" />
+                  <Button mnemonicParsing="false" onAction="#printAction" styleClass="custom-common-button" text="%company.controller.company.print.button" />
+               </children>
+            </VBox>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="%company.controller.company.fullname" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="20.0" />
+               </GridPane.margin>
+            </Text>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="%company.controller.company.motive" GridPane.rowIndex="4">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="%company.controller.company.logo" GridPane.rowIndex="1">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="15.0" />
+               </GridPane.margin>
+            </Text>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="%company.controller.company.address" GridPane.rowIndex="2">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <TextField fx:id="logoTextField" maxWidth="224.0" prefHeight="30.0" prefWidth="224.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="15.0" />
+               </GridPane.margin></TextField>
+            <Button fx:id="browselogoButton" mnemonicParsing="false" onAction="#selectCompanyLogo" prefHeight="30.0" prefWidth="150.0" text="%company.controller.company.browse.button" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="15.0" />
+               </GridPane.margin></Button>
+            <VBox GridPane.columnIndex="1" GridPane.valignment="BOTTOM">
+               <children>
+                  <TextField fx:id="companyFullName" prefHeight="30.0" prefWidth="300.0" styleClass="custom-common-text-field">
+                     <font>
+                        <Font name="Open Sans" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Text fx:id="companyNameErrorLabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="337.0" />
+               </children>
+            </VBox>
+            <VBox GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <TextArea id="remarks" fx:id="companyAddress" prefHeight="136.0" prefWidth="1000.0" wrapText="true" />
+                  <Text fx:id="companyAddressErrorLabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="317.0" />
+               </children>
+            </VBox>
+            <VBox GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <TextArea id="remarks" fx:id="companyMotive" prefHeight="136.0" prefWidth="1000.0" wrapText="true" />
+                  <Text fx:id="companyMotiveErrorLabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="377.0" />
+               </children>
+            </VBox>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="%company.controller.company.currency" GridPane.columnIndex="3" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="20.0" />
+               </GridPane.margin>
+            </Text>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="%company.controller.company.vat" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="15.0" />
+               </GridPane.margin>
+            </Text>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="%company.controller.company.refund.policy" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <VBox GridPane.columnIndex="4" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <children>
+                  <TextField fx:id="companyBillingCurrency" prefHeight="30.0" prefWidth="300.0" styleClass="custom-common-text-field">
+                     <font>
+                        <Font name="Open Sans" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Text fx:id="companyBillingCurrencyErrorText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="345.0" />
+               </children>
+            </VBox>
+            <VBox GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <children>
+                  <TextField fx:id="companyBillingVAT" prefHeight="30.0" prefWidth="300.0" styleClass="custom-common-text-field">
+                     <font>
+                        <Font name="Open Sans" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Text fx:id="companyBillingVATErrorText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="396.89453125" />
+               </children>
+            </VBox>
+            <VBox GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <children>
+                  <TextArea id="remarks" fx:id="companyBillingRefundPolicy" prefHeight="136.0" prefWidth="1000.0" wrapText="true" />
+                  <Text fx:id="companyBillingRefundPolicyErrorText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="368.89453125" />
+               </children>
+            </VBox>
+            <ImageView fx:id="selectedLogo" fitHeight="78.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <fx:include source="CommonFooter.fxml" />
+   </children>
+</AnchorPane>

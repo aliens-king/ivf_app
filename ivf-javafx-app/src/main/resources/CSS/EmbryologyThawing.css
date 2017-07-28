@@ -1,0 +1,23 @@
+.body{
+	-fx-background-color: #2980B9;
+}
+ 
+.text {
+	-fx-font-size: 14px;
+	-fx-text-fill: #000000;
+}
+
+.headercolor {
+	-fx-font-size: 14px;
+	-fx-background-color:#06aad9;
+}
+
+.grid .text{
+	
+	-fx-background-color:#929292;
+	-fx-font-size: 18px;
+	
+}
+.tableheadtextcolor{
+	-fx-text-fill: #FFFFFF;
+}

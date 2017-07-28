@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="2000.0" maxWidth="2000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="648.0" prefWidth="1145.0" style="-fx-background-color: #2980b9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.PrintListController">
+    <children>
+      <GridPane layoutX="31.0" layoutY="23.0" maxHeight="45.0" prefHeight="45.0" prefWidth="1059.0" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="55.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ToggleButton id="printToggleButton" fx:id="minusOne" maxHeight="45.0" mnemonicParsing="false" onAction="#minusOneAction" prefHeight="200.0" prefWidth="500.0" scaleY="0.7" selected="true" text="%printlist.togglebutton.minus1" textFill="WHITE" GridPane.hgrow="ALWAYS" GridPane.vgrow="NEVER">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group" />
+               </toggleGroup>
+               <font>
+                  <Font name="Open Sans" size="32.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton id="printToggleButtonblue" fx:id="zero" maxHeight="200.0" mnemonicParsing="false" onAction="#zeroAction" prefHeight="200.0" prefWidth="500.0" scaleY="0.7" text="%printlist.togglebutton.zero" textFill="WHITE" toggleGroup="$group" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS">
+               <font>
+                  <Font name="Open Sans" size="32.0" />
+               </font></ToggleButton>
+            <ToggleButton id="printToggleButton" fx:id="one" maxHeight="200.0" mnemonicParsing="false" onAction="#oneAction" prefHeight="200.0" prefWidth="500.0" scaleY="0.7" text="%printlist.togglebutton.one" textFill="WHITE" toggleGroup="$group" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS">
+               <font>
+                  <Font name="Open Sans" size="32.0" />
+               </font></ToggleButton>
+            <ToggleButton id="printToggleButtonblue" fx:id="two" maxHeight="200.0" mnemonicParsing="false" onAction="#twoAction" prefHeight="200.0" prefWidth="500.0" scaleY="0.7" text="%printlist.togglebutton.two" textFill="WHITE" toggleGroup="$group" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS">
+               <font>
+                  <Font name="Open Sans" size="32.0" />
+               </font></ToggleButton>
+            <ToggleButton id="printToggleButton" fx:id="three" maxHeight="200.0" mnemonicParsing="false" onAction="#threeAction" prefHeight="200.0" prefWidth="500.0" scaleY="0.7" text="%printlist.togglebutton.three" textFill="WHITE" toggleGroup="$group" GridPane.columnIndex="4" GridPane.hgrow="ALWAYS">
+               <font>
+                  <Font name="Open Sans" size="32.0" />
+               </font></ToggleButton>
+            <ToggleButton id="printToggleButtonblue" fx:id="four" maxHeight="200.0" mnemonicParsing="false" onAction="#fourAction" prefHeight="200.0" prefWidth="500.0" scaleY="0.7" text="%printlist.togglebutton.four" textFill="WHITE" toggleGroup="$group" GridPane.columnIndex="5" GridPane.hgrow="ALWAYS">
+               <font>
+                  <Font name="Open Sans" size="32.0" />
+               </font></ToggleButton>
+            <ToggleButton id="printToggleButton" fx:id="five" maxHeight="200.0" mnemonicParsing="false" onAction="#fiveAction" prefHeight="200.0" prefWidth="500.0" scaleY="0.7" text="%printlist.togglebutton.five" textFill="WHITE" toggleGroup="$group" GridPane.columnIndex="6" GridPane.hgrow="ALWAYS">
+               <font>
+                  <Font name="Open Sans" size="32.0" />
+               </font></ToggleButton>
+            <ToggleButton id="printToggleButtonblue" fx:id="six" maxHeight="200.0" mnemonicParsing="false" onAction="#sixAction" prefHeight="200.0" prefWidth="500.0" scaleY="0.7" text="%printlist.togglebutton.six" textFill="WHITE" toggleGroup="$group" GridPane.columnIndex="7" GridPane.hgrow="ALWAYS">
+               <font>
+                  <Font name="Open Sans" size="32.0" />
+               </font></ToggleButton>
+            <ToggleButton id="printToggleButton" fx:id="seven" maxHeight="200.0" mnemonicParsing="false" onAction="#sevenAction" prefHeight="200.0" prefWidth="500.0" scaleY="0.7" text="%printlist.togglebutton.seven" textFill="WHITE" toggleGroup="$group" GridPane.columnIndex="8" GridPane.hgrow="ALWAYS">
+               <font>
+                  <Font name="Open Sans" size="32.0" />
+               </font></ToggleButton>
+            <ToggleButton id="printToggleButtonblue" fx:id="eight" maxHeight="200.0" mnemonicParsing="false" onAction="#eightAction" prefHeight="200.0" prefWidth="500.0" scaleY="0.7" text="%printlist.togglebutton.eight" textFill="WHITE" toggleGroup="$group" GridPane.columnIndex="9" GridPane.hgrow="ALWAYS">
+               <font>
+                  <Font name="Open Sans" size="32.0" />
+               </font></ToggleButton>
+            <ToggleButton id="printToggleButton" fx:id="nine" maxHeight="200.0" mnemonicParsing="false" onAction="#nineAction" prefHeight="200.0" prefWidth="500.0" scaleY="0.7" text="%printlist.togglebutton.nine" textFill="WHITE" toggleGroup="$group" GridPane.columnIndex="10" GridPane.hgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <font>
+                  <Font name="Open Sans" size="32.0" />
+               </font>
+            </ToggleButton>
+         </children>
+      </GridPane>
+       <Button id="markAll" layoutX="31.0" layoutY="78.0" mnemonicParsing="false" onAction="#printSelectedAction" prefHeight="31.0" prefWidth="200.0" text="%printlist.button.printselected" textFill="WHITE" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="78.0">
+           <font>
+               <Font name="Open Sans" size="15.0" />
+           </font>
+       </Button>
+      <Button id="saveAccount" layoutX="240.0" layoutY="78.0" mnemonicParsing="false" onAction="#printPatientListAction" prefHeight="31.0" prefWidth="200.0" text="%printlist.button.printpatientlist" textFill="WHITE" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="78.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Button>
+      <Text fx:id="dateLabel" fill="WHITE" layoutX="1002.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%printlist.text.date" AnchorPane.rightAnchor="55.63671875" AnchorPane.topAnchor="80.576171875">
+         <font>
+            <Font name="Open Sans" size="18.0" />
+         </font>
+      </Text>
+      <ScrollPane fx:id="scrPane" fitToHeight="true" fitToWidth="true" layoutX="31.0" layoutY="117.0" AnchorPane.bottomAnchor="107.0" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="117.0">
+         <content>
+            <VBox fx:id="vbox" style="-fx-background-color: #ffffff;" />
+         </content>
+      </ScrollPane>
+      <Button id="deleteSelected" fx:id="deleteSelectedButton" layoutX="452.0" layoutY="77.0" mnemonicParsing="false" onAction="#deleteSelectedAction" prefHeight="31.0" prefWidth="200.0" text="%printlist.button.deleteselected" textFill="WHITE" AnchorPane.leftAnchor="449.0" AnchorPane.topAnchor="78.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Button>
+    </children>
+    <fx:include source="CommonFooter.fxml" />
+</AnchorPane>

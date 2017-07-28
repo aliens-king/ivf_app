@@ -1,0 +1,20 @@
+#copyrightRoot {
+    -fx-background-color: #0AC4EF;
+}
+
+.button {
+    -fx-background-image: url("/icons/next_icon.png");
+    -fx-background-color: #06aad9;
+    -fx-background-radius: 80;
+    -fx-background-insets: 0,2,2,2,0;
+    -fx-padding: 20 20 20 20;
+}
+.button:hover:pressed{
+    -fx-background-color: #ffffff;
+    -fx-background-image: url("/icons/next_icon_blue.png");
+}
+
+
+.button:hover{
+    -fx-background-color: linear-gradient(#06aad9, #3398DB);
+}

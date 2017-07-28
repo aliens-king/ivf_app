@@ -1,0 +1,12 @@
+.text {
+	-fx-font-size: 16px;
+	
+}
+
+.header  .text {
+	-fx-font-size: 24px;
+	
+} 
+.textColor{
+	 -fx-text-fill: #FFFFFF;
+}

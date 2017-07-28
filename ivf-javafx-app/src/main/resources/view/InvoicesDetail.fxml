@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane stylesheets="@../CSS/mvid.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.InvoicesDetailController">
+   <styleClass>
+      <String fx:value="root" />
+      <String fx:value="layout-resolution-includes" />
+   </styleClass>
+   <children>
+      <fx:include fx:id="commonDetail" source="CommonDetail.fxml" />
+      <fx:include source="CommonFooter.fxml" />
+      <GridPane layoutX="60.0" layoutY="300.0" prefHeight="400.0" prefWidth="1340.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" percentHeight="100.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TableView fx:id="invoicesDetailTableView" editable="true" prefHeight="400.0" prefWidth="1340.0">
+              <columns>
+                  <TableColumn fx:id="srNoColumn" prefWidth="90.0" text="%common.label.sr.no" />
+                <TableColumn fx:id="invoiceHyperlink" prefWidth="155.0" text="%payment.detail.controller.invoice.label" />
+                <TableColumn fx:id="totalBill" prefWidth="155.0" text="%add.payment.total.bill" />
+                  <TableColumn fx:id="totalPaid" prefWidth="155.0" text="%add.payment.total.paid" />
+                  <TableColumn fx:id="totalBalance" prefWidth="155.0" text="%add.payment.total.balance" />
+                  <TableColumn fx:id="invoiceDate" prefWidth="125.0" text="%billing.invoice.created" />
+                  <TableColumn fx:id="billedBy" prefWidth="155.0" text="%add.payment.billed.by" />
+                  <TableColumn fx:id="remarksColumn" prefWidth="330.0" text="%common.cryopreservation.label.remarks" />
+              </columns>
+            </TableView>
+         </children>
+      </GridPane>
+      <Button layoutX="1250.0" layoutY="720.0" mnemonicParsing="false" onAction="#printAction" styleClass="custom-common-button" text="%common.button.print" />
+      <HBox layoutX="265.0" layoutY="722.0" prefHeight="41.0" prefWidth="752.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="245.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" text="%add.payment.total.bill">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="totalBillTextField" prefHeight="30.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="245.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" text="%add.payment.total.paid">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="totalPaidTextField" prefHeight="30.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="245.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" text="%add.payment.total.balance">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="totalBalanceTextField" prefHeight="30.0" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

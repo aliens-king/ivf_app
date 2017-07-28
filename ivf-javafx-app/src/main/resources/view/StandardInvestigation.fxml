@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="2000.0" maxWidth="2000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="855.0" prefWidth="1436.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.StandardInvestigationController">
+   <children>
+    <fx:include fx:id="commonDetail" source="CommonDetail.fxml" />
+      <GridPane layoutX="358.0" layoutY="470.0" prefHeight="272.0" prefWidth="845.0" AnchorPane.leftAnchor="358.0" AnchorPane.topAnchor="470.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="489.0" minWidth="10.0" prefWidth="489.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="217.0" minWidth="10.0" prefWidth="128.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="202.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="164.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="164.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="164.0" minHeight="10.0" prefHeight="104.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="36.0" prefWidth="100.0" stylesheets="@../CSS/StandardInvestigation.css" text="%standardinvestigation.label.bmi" textFill="WHITE" GridPane.rowIndex="1">
+               <styleClass>
+                  <String fx:value="headercolor" />
+                  <String fx:value="grid" />
+               </styleClass></Label>
+            <TextField fx:id="woamnBMITextField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="100.0" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets top="-5.0" />
+               </GridPane.margin></TextField>
+            <Label alignment="BASELINE_LEFT" prefHeight="36.0" prefWidth="651.0" stylesheets="@../CSS/StandardInvestigation.css" text="%standardinvestigation.label.gernalremarks" textFill="WHITE" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="headercolor" />
+                  <String fx:value="grid" />
+               </styleClass></Label>
+            <Label alignment="CENTER" prefHeight="36.0" prefWidth="100.0" stylesheets="@../CSS/StandardInvestigation.css" text="%standardinvestigation.label.bmi" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <styleClass>
+                  <String fx:value="headercolor" />
+                  <String fx:value="grid" />
+               </styleClass></Label>
+            <TextField fx:id="partnerBMITextField" maxWidth="-Infinity" prefHeight="35.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets top="-5.0" />
+               </GridPane.margin></TextField>
+            <Label text="%standardinvestigation.label.bodymassindex" textFill="WHITE" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="105.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="167.0" text="%standardinvestigation.label.bodymassindex" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label alignment="CENTER" prefHeight="36.0" prefWidth="241.0" stylesheets="@../CSS/StandardInvestigation.css" text="%common.label.remarks" textFill="WHITE" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="24.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="headercolor" />
+                  <String fx:value="grid" />
+               </styleClass></Label>
+            <TextArea id="remarks" fx:id="remarksTextArea" prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <Label alignment="CENTER" layoutX="55.0" layoutY="236.0" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: WHITE;" text="%investigation.label.bloodwork" textFill="#eb0808" AnchorPane.leftAnchor="55.0" />
+      <TableView fx:id="womanBloodWorkTable" editable="true" layoutX="207.0" layoutY="220.0" prefHeight="56.0" prefWidth="401.0" AnchorPane.leftAnchor="207.0" />
+      <Label alignment="CENTER" layoutX="55.0" layoutY="308.0" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: WHITE;" text="%investigation.label.microbiology" textFill="#e80505" AnchorPane.leftAnchor="55.0" />
+      <TableView fx:id="womanMicrobiologyTable" editable="true" layoutX="207.0" layoutY="292.0" prefHeight="56.0" prefWidth="401.0" AnchorPane.leftAnchor="207.0" />
+      <Label alignment="CENTER" layoutX="55.0" layoutY="380.0" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: WHITE;" text="%investigation.label.hormonalassay" textFill="#e80404" AnchorPane.leftAnchor="55.0" />
+      <TableView fx:id="womanHormonalTable" editable="true" layoutX="207.0" layoutY="363.0" prefHeight="56.0" prefWidth="401.0" AnchorPane.leftAnchor="207.0" />
+      <Label alignment="CENTER" layoutX="629.0" layoutY="236.0" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: WHITE;" text="%investigation.label.bloodwork" textFill="#eb0808" AnchorPane.leftAnchor="629.0" />
+      <Label alignment="CENTER" layoutX="629.0" layoutY="309.0" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: WHITE;" text="%investigation.label.microbiology" textFill="#ee0909" AnchorPane.leftAnchor="629.0" />
+      <TableView fx:id="manBloodWorkTable" editable="true" layoutX="780.0" layoutY="219.0" prefHeight="56.0" prefWidth="401.0" AnchorPane.leftAnchor="780.0" />
+      <TableView fx:id="manMicrobiologyTable" editable="true" layoutX="780.0" layoutY="290.0" prefHeight="56.0" prefWidth="401.0" AnchorPane.leftAnchor="780.0" />
+      <TableView fx:id="manHormonalTable" editable="true" layoutX="780.0" layoutY="361.0" prefHeight="56.0" prefWidth="401.0" AnchorPane.leftAnchor="780.0" />
+      <Label alignment="CENTER" layoutX="629.0" layoutY="381.0" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: WHITE;" text="%investigation.label.hormonalassay" textFill="#ee0909" AnchorPane.leftAnchor="629.0" />
+      <ComboBox fx:id="nurseComboBox" layoutX="208.0" layoutY="432.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="54.0" layoutY="437.0" prefHeight="28.0" prefWidth="100.0" text="%standardinvestigation.label.nursename" textFill="WHITE">
+         <styleClass>
+            <String fx:value="text" />
+            <String fx:value="sttextsize" />
+         </styleClass>
+      </Label>
+      <fx:include source="CommonFooter.fxml" />
+      <VBox layoutX="1007.0" layoutY="595.0" prefHeight="123.0" prefWidth="152.0" spacing="6.0">
+         <children>
+            <Button fx:id="editBtn" layoutX="1132.0" layoutY="544.0" mnemonicParsing="false" onAction="#editAction" prefHeight="30.0" prefWidth="140.0" text="%common.button.edit" GridPane.rowIndex="1" />
+            <Button layoutX="1132.0" layoutY="566.0" mnemonicParsing="false" onAction="#saveAction" prefHeight="30.0" prefWidth="140.0" text="%common.button.save" GridPane.rowIndex="2" />
+            <Button layoutX="1132.0" layoutY="518.0" mnemonicParsing="false" onAction="#printAction" prefHeight="30.0" prefWidth="140.0" text="%common.button.print.form" />
+         </children>
+      </VBox>
+      <VBox layoutX="1191.0" layoutY="470.0" prefHeight="272.0" prefWidth="225.0">
+         <children>
+            <Label prefHeight="36.0" prefWidth="228.0" text="%nursestation.label.pregscan">
+               <styleClass>
+                  <String fx:value="headercolor" />
+                  <String fx:value="grid" />
+               </styleClass>
+            </Label>
+            <TextArea fx:id="pScanTextArea" prefHeight="236.0" prefWidth="225.0" />
+         </children>
+      </VBox>
+      <GridPane layoutX="80.0" layoutY="596.0" maxHeight="110.0" maxWidth="250.0" prefHeight="120.0" prefWidth="275.0" styleClass="registrant-gridpane">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="30.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="70.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label styleClass="text" text="%common.emb.nurse.registrant" />
+            <Label styleClass="text" text="%common.emb.asst.nurse.registrant" GridPane.rowIndex="1" />
+            <TextField fx:id="nurseRegistrant" prefHeight="30.0" GridPane.columnIndex="1" />
+            <TextField fx:id="asstNurseRegistrant" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#saveRegistrant" prefHeight="30.0" prefWidth="250.0" text="%common.registrants.save" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+   <stylesheets>
+      <URL value="@../CSS/mvid.css" />
+      <URL value="@../CSS/StandardInvestigation.css" />
+   </stylesheets>
+   <styleClass>
+      <String fx:value="layout-resolution-includes" />
+      <String fx:value="body" />
+   </styleClass>
+</AnchorPane>

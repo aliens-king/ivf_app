@@ -1,0 +1,18 @@
+@font-face {
+	-fx-font-family: "Open Sans";
+	src: url('fonts/OpenSans-Regular.ttf');
+}
+
+.refund-module-backgroud{
+	-fx-background: #6b7d6e;
+	-fx-font-family: "Open Sans";
+}
+
+
+.refund-module-label .label{
+	-fx-text-fill: #FFFFFF;
+}
+
+
+
+ 

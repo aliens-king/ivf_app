@@ -1,0 +1,13 @@
+.settings
+*.prefs
+mvid-code.rar
+target
+build
+deploy
+dist
+externalLibs
+project
+projectRefs
+!build.xml
+*.log
+.classpath

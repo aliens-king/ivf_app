@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="archiveScreen" prefHeight="398.0" prefWidth="580.0" styleClass="root" stylesheets="@../CSS/Archive.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.ArchiveController">
+   <children>
+      <VBox layoutX="55.0" layoutY="270.0" prefHeight="530.0" prefWidth="1396.0" spacing="25.0">
+         <children>
+            <FlowPane hgap="35.0" minHeight="38.0" prefHeight="26.0" prefWidth="1392.0">
+               <children>
+                  <Button alignment="CENTER" contentDisplay="CENTER" minHeight="35.0" mnemonicParsing="false" onAction="#markAllAction" prefHeight="37.0" prefWidth="160.0" text="%mark.all.rows" textAlignment="CENTER">
+                     <padding>
+                        <Insets left="1.0" />
+                     </padding>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="CENTER" minHeight="35.0" mnemonicParsing="false" onAction="#unmarkAllAction" prefHeight="37.0" prefWidth="160.0" text="%unmark.all.rows" textAlignment="CENTER">
+                     <padding>
+                        <Insets left="1.0" />
+                     </padding>
+                  </Button>
+                  <Label fx:id="fileUploadedTypeLable" alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="657.0" text="%file.uploaded.type" />
+               </children>
+            </FlowPane>
+            <TableView id="appointmentTable" fx:id="archiveTable" onMouseClicked="#mouseClicked" prefHeight="430.0" prefWidth="585.0">
+              <columns>
+                  <TableColumn fx:id="selectedColumn" prefWidth="100.0" text="Selected" />
+                <TableColumn fx:id="date" maxWidth="6000.0" minWidth="20.0" prefWidth="166.99996948242188" text="Date" />
+                <TableColumn fx:id="fileName" minWidth="0.0" prefWidth="781.0" text="File Name" />
+                  <TableColumn fx:id="extention" minWidth="0.0" prefWidth="163.0" text="Ext" />
+                  <TableColumn fx:id="deleteFile" prefWidth="192.0" text="Delete" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="1300.0" spacing="119.0">
+               <children>
+                  <Button fx:id="selectedPrint" alignment="CENTER" contentDisplay="CENTER" minHeight="38.0" mnemonicParsing="false" onAction="#printSelectedAction" prefHeight="50.0" prefWidth="190.0" text="%print.select.label" textAlignment="CENTER" />
+                  <Button alignment="CENTER" contentDisplay="CENTER" minHeight="38.0" mnemonicParsing="false" onAction="#printSummaryAction" prefHeight="50.0" prefWidth="190.0" text="%print.summary.label" textAlignment="CENTER" />
+                  <Button alignment="CENTER" contentDisplay="CENTER" minHeight="38.0" mnemonicParsing="false" onAction="#addNewFile" prefHeight="50.0" prefWidth="190.0" text="%add.new.file.label" textAlignment="CENTER" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <fx:include source="CommonFooter.fxml" />
+      <fx:include fx:id="commonDetail" source="CommonDetail.fxml" />
+   </children>
+</AnchorPane>

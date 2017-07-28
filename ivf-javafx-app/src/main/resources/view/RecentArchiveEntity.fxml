@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="350.0" prefHeight="57.0" prefWidth="350.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cf.card.ui.controller.RecentArchiveEntityController">
+    <children>
+        <Label fx:id="womanSurname" layoutX="133.0" layoutY="13.0" prefHeight="32.0" prefWidth="231.0" text="%recent.achieve.entity.label.text" AnchorPane.leftAnchor="133.0" AnchorPane.topAnchor="13.0">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Button fx:id="button" layoutX="14.0" layoutY="8.0" maxHeight="82.0" maxWidth="149.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="39.0" prefWidth="95.0" AnchorPane.leftAnchor="14.0" />
+    </children>
+</AnchorPane>
