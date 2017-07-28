@@ -149,7 +149,7 @@ public class MainApp extends Application {
 	LoadPanels.loadCopyrightPanel(rootLayout, primaryStage, this);
 	height = this.getPrimaryStage().getHeight();
 	width = this.getPrimaryStage().getWidth();
-	patientFileStage.getIcons().add(new Image("/images/ivf(2).png"));
+	patientFileStage.getIcons().add(new Image("/icons/logotaskbar.png"));
     }
 
     public static void fontStyle() {
